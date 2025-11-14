@@ -1,92 +1,23 @@
-# 📰 News Aggregation & Intelligence Platform - Volunteer Assessment Tasks
+# 🌐 Frontend Web Development Team Assessment
 
-Welcome to the **News Aggregation & Intelligence Platform** project! This repository contains assessment tasks designed to evaluate technical skills across different teams through a realistic news aggregation system.
+## Task: News Browser Web Interface
 
-## 🎯 Project Overview
+**Estimated Time:** 6-8 hours  
+**Difficulty:** Intermediate
 
-The platform collects news articles from various online sources, processes them, classifies them, stores them, and presents them through web/mobile interfaces. Users can search, filter, save articles, and receive notifications when new articles match their interests.
+## 🎯 Objective
 
-## 🏗️ Repository Structure
+Create a modern, responsive web interface that allows users to explore news articles with an intuitive and engaging user experience.
 
-Each team has their own branch with specific tasks and requirements:
+## 📋 Requirements
 
-### 📊 Available Team Branches
+### Core Pages & Features
 
-| Team | Branch Name | Focus Area | Skills Assessed |
-|------|-------------|------------|-----------------|
-| 🤖 AI/Data/ML | `ai-ml-team` | News Extraction & Classification | Web scraping, NLP, Data processing, Classification |
-| ⚙️ Backend | `backend-team` | News Article Management API | REST APIs, Database design, CRUD operations |
-| � Frontend Web | `frontend-web-team` | News Browser Interface | React/Next.js, UI/UX, Component design |
-| 📱 Mobile | `mobile-team` | News Mobile App | Mobile development, Local storage, Navigation |
-| 🏛️ System Design | `system-architecture-team` | Architecture & Design | System design, Scalability, Distributed systems |
-| 🧪 Quality Assurance | `qa-team` | QA Planning & Testing | Test planning, Bug reporting, Quality processes |
-| 📈 Project Management | `pm-marketing-team` | Strategy & Planning | Project planning, Market research, Roadmapping |
-| 📊 Data Analysis | `data-analysis-team` | Data Collection & Analysis | Data processing, Analysis, Insights generation |
-
-## 🚀 Getting Started
-
-### For Volunteers:
-
-1. **Choose your team** based on your skills and interests
-2. **Switch to your team's branch**:
-   ```bash
-   git checkout [branch-name]
-   ```
-3. **Read the detailed README** in your branch for specific requirements
-4. **Complete the assigned tasks** following the guidelines provided
-5. **Submit your work** as instructed in your team's README
-
-### For Assessors:
-
-1. **Review submissions** in each team's branch
-2. **Use the evaluation criteria** provided in each team's README
-3. **Provide feedback** using the structured format included
-
-## 📋 General Guidelines
-
-### ⏰ Time Allocation
-- Most tasks are designed to take **4-8 hours** for completion
-- Focus on **quality over quantity**
-- Document your **thought process** and **decisions**
-
-### 📤 Submission Format
-- Create a **pull request** from your team branch to main
-- Include all **deliverables** specified in your team's README
-- Add a **summary** of your approach and any assumptions made
-
-### 🎯 Evaluation Criteria
-Each team has specific evaluation criteria, but all submissions will be assessed on:
-- **Technical competency** appropriate to the role
-- **Code quality** and documentation (where applicable)
-- **Problem-solving approach**
-- **Communication** and explanation of solutions
-
-## 📂 Team README Files (Available in Main Branch)
-
-If you want to preview the tasks before switching branches:
-- `AI-ML-TEAM-README.md` - AI/Data/ML team tasks
-- `BACKEND-TEAM-README.md` - Backend engineering tasks
-- `FRONTEND-WEB-TEAM-README.md` - Frontend web development tasks
-- `MOBILE-TEAM-README.md` - Mobile development tasks
-- `SYSTEM-ARCHITECTURE-TEAM-README.md` - System design tasks
-- `QA-TEAM-README.md` - Quality assurance tasks
-- `PM-MARKETING-TEAM-README.md` - Project management tasks
-- `DATA-ANALYSIS-TEAM-README.md` - Data analysis tasks
-
-## 🤝 Support
-
-If you have questions:
-- Check your **team's README** first for detailed instructions
-- Review the **examples** provided in your branch
-- Contact the assessment team for clarification
-
-## 📜 License
-
-This project is for assessment purposes only. All code and documentation created should be original work or properly attributed.
-
----
-
-**Good luck with your assessment! We're excited to see your solutions. 🚀**
+#### 1. News List Page (Home)
+- **Article cards** displaying:
+  - Title (truncated if too long)
+  - Summary/snippet (first 150 characters)
+  - Publication date (formatted nicely)
   - Category badge
   - Author name (if available)
   - Read more button
