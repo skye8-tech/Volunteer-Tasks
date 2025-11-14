@@ -1,337 +1,293 @@
-# 📰 News Aggregation & Intelligence Platform - Volunteer Assessment Tasks
+# 📊 Data Analysis Team Assessment
 
-Welcome to the **News Aggregation & Intelligence Platform** project! This repository contains assessment tasks designed to evaluate technical skills across different teams through a realistic news aggregation system.
+## Task: News Data Collection & Analysis Project
 
-## 🎯 Project Overview
+**Estimated Time:** 6-8 hours  
+**Difficulty:** Intermediate
 
-The platform collects news articles from various online sources, processes them, classifies them, stores them, and presents them through web/mobile interfaces. Users can search, filter, save articles, and receive notifications when new articles match their interests.
+## 🎯 Objective
 
-## 🏗️ Repository Structure
+Demonstrate your data analysis skills by collecting, structuring, analyzing, and deriving insights from news article data. This task evaluates your ability to work with real-world data, perform meaningful analysis, and communicate findings effectively.
 
-Each team has their own branch with specific tasks and requirements:
+## 📋 Project Requirements
 
-### 📊 Available Team Branches
+### Phase 1: Data Collection & Structuring (40%)
 
-| Team | Branch Name | Focus Area | Skills Assessed |
-|------|-------------|------------|-----------------|
-| 🤖 AI/Data/ML | `ai-ml-team` | News Extraction & Classification | Web scraping, NLP, Data processing, Classification |
-| ⚙️ Backend | `backend-team` | News Article Management API | REST APIs, Database design, CRUD operations |
-| � Frontend Web | `frontend-web-team` | News Browser Interface | React/Next.js, UI/UX, Component design |
-| 📱 Mobile | `mobile-team` | News Mobile App | Mobile development, Local storage, Navigation |
-| 🏛️ System Design | `system-architecture-team` | Architecture & Design | System design, Scalability, Distributed systems |
-| 🧪 Quality Assurance | `qa-team` | QA Planning & Testing | Test planning, Bug reporting, Quality processes |
-| 📈 Project Management | `pm-marketing-team` | Strategy & Planning | Project planning, Market research, Roadmapping |
-| 📊 Data Analysis | `data-analysis-team` | Data Collection & Analysis | Data processing, Analysis, Insights generation |
+#### Manual Data Collection Task
+**Collect 30-50 news articles** from various online sources over the past 2 weeks.
 
-## 🚀 Getting Started
+**Required Data Points for Each Article:**
+- **Article Title** (complete headline)
+- **Publication Source** (website/publication name)
+- **Author Name** (if available)
+- **Publication Date** (date and time if available)
+- **Category/Topic** (classify into predefined categories)
+- **Article URL** (direct link to article)
+- **Summary/Snippet** (first paragraph or 100-150 characters)
+- **Country/Region** (geographic focus of the news)
+- **Language** (article language)
+- **Word Count** (approximate article length)
 
-### For Volunteers:
+#### Data Structure Requirements
+**Create a clean, structured dataset using CSV or Excel format with:**
+- **Consistent formatting** across all entries
+- **Data validation** (no missing required fields)
+- **Standardized categories** (use predefined list below)
+- **Date formatting** (consistent date/time format)
+- **URL validation** (working links)
 
-1. **Choose your team** based on your skills and interests
-2. **Switch to your team's branch**:
-   ```bash
-   git checkout [branch-name]
-   ```
-3. **Read the detailed README** in your branch for specific requirements
-4. **Complete the assigned tasks** following the guidelines provided
-5. **Submit your work** as instructed in your team's README
+#### Predefined Categories
+Choose from these categories for consistent classification:
+- Politics & Government
+- Technology & Innovation
+- Business & Economics
+- Health & Medicine
+- Education & Science
+- Sports & Entertainment
+- World News & International
+- Environment & Climate
+- Crime & Safety
+- Arts & Culture
 
-### For Assessors:
+### Phase 2: Data Analysis & Insights (40%)
 
-1. **Review submissions** in each team's branch
-2. **Use the evaluation criteria** provided in each team's README
-3. **Provide feedback** using the structured format included
+#### Quantitative Analysis
+Perform and document these analyses:
 
-## 📋 General Guidelines
+**1. Distribution Analysis**
+- **Category distribution:** Which topics are most/least covered?
+- **Source distribution:** Which publications have most articles in your dataset?
+- **Geographic distribution:** Which countries/regions are most represented?
+- **Publication timeline:** How are articles distributed across the collection period?
 
-### ⏰ Time Allocation
-- Most tasks are designed to take **4-8 hours** for completion
-- Focus on **quality over quantity**
-- Document your **thought process** and **decisions**
+**2. Content Analysis**
+- **Article length analysis:** Distribution of word counts across categories
+- **Title length patterns:** Average title length by category
+- **Author analysis:** Most prolific authors in your dataset
+- **Language distribution:** If collecting multilingual content
 
-### 📤 Submission Format
-- Create a **pull request** from your team branch to main
-- Include all **deliverables** specified in your team's README
-- Add a **summary** of your approach and any assumptions made
+**3. Trend Analysis**
+- **Daily publication patterns:** Which days have more news activity?
+- **Category trends over time:** How do different topics fluctuate?
+- **Source activity patterns:** Publication frequency by source
+- **Geographic news focus changes:** Shifting regional attention
 
-### 🎯 Evaluation Criteria
-Each team has specific evaluation criteria, but all submissions will be assessed on:
-- **Technical competency** appropriate to the role
-- **Code quality** and documentation (where applicable)
-- **Problem-solving approach**
-- **Communication** and explanation of solutions
+#### Statistical Insights
+**Provide descriptive statistics:**
+- Mean, median, mode for numerical data
+- Standard deviation and variance where applicable
+- Correlation analysis between variables (if applicable)
+- Outlier identification and analysis
 
-## 📂 Team README Files (Available in Main Branch)
+### Phase 3: Insights & Recommendations (20%)
 
-If you want to preview the tasks before switching branches:
-- `AI-ML-TEAM-README.md` - AI/Data/ML team tasks
-- `BACKEND-TEAM-README.md` - Backend engineering tasks
-- `FRONTEND-WEB-TEAM-README.md` - Frontend web development tasks
-- `MOBILE-TEAM-README.md` - Mobile development tasks
-- `SYSTEM-ARCHITECTURE-TEAM-README.md` - System design tasks
-- `QA-TEAM-README.md` - Quality assurance tasks
-- `PM-MARKETING-TEAM-README.md` - Project management tasks
-- `DATA-ANALYSIS-TEAM-README.md` - Data analysis tasks
+#### Data-Driven Insights Document
+**Create a 800-1200 word analysis addressing:**
 
-## 🤝 Support
+**Key Findings:**
+- What patterns emerged from your data collection?
+- Which categories dominate current news cycles?
+- What geographic or temporal trends did you observe?
+- Are there any surprising insights or outliers?
 
-If you have questions:
-- Check your **team's README** first for detailed instructions
-- Review the **examples** provided in your branch
-- Contact the assessment team for clarification
+**Quality Assessment:**
+- What data quality issues did you encounter?
+- How did you handle missing or inconsistent information?
+- What limitations exist in your dataset?
+- How would you improve data collection for better analysis?
 
-## 📜 License
+**Strategic Recommendations:**
+- Based on your analysis, what content strategy would you recommend?
+- Which news sources should be prioritized for aggregation?
+- What categories deserve more coverage attention?
+- How would you optimize content collection for user engagement?
 
-This project is for assessment purposes only. All code and documentation created should be original work or properly attributed.
-
----
-
-**Good luck with your assessment! We're excited to see your solutions. 🚀**
-  - Category badge
-  - Author name (if available)
-  - Read more button
-- **Responsive grid layout** (3 columns desktop, 2 tablet, 1 mobile)
-- **Loading states** for better UX
-- **Empty state** handling
-
-#### 2. Article Detail Page
-- **Full article display** with:
-  - Complete title
-  - Full content
-  - Publication date and author
-  - Category
-  - Back to list navigation
-  - Share button (bonus)
-  - Related articles section (bonus)
-
-#### 3. Filter & Search Panel
-- **Category filter dropdown** with all available categories
-- **Search bar** for keyword searching
-- **Clear filters** button
-- **Active filter indicators**
-- **Results counter** ("Showing 24 of 156 articles")
-
-#### 4. Navigation & Layout
-- **Header** with logo/brand and navigation
-- **Mobile-friendly hamburger menu**
-- **Footer** with basic information
-- **Breadcrumbs** for better navigation
-
-### Technical Requirements
-
-#### Framework & Setup
-- **React** (preferred) or **Next.js**
-- **Modern CSS** (Flexbox/Grid, CSS Modules, Styled Components, or Tailwind CSS)
-- **Responsive design** for mobile, tablet, and desktop
-- **Clean component architecture**
-
-#### State Management
-- **useState/useReducer** for local state
-- **Context API** or state management library (Redux/Zustand) for global state
-- **Data fetching** with proper loading and error states
-
-#### Data Source
-You can use **any of these options:**
-1. **Mock JSON file** with sample articles (provided below)
-2. **Public news API** (NewsAPI, Guardian API, etc.)
-3. **Local API** you create for testing
-4. **Static data** in JavaScript files
-
-## 📊 Sample Data Structure
-
-```json
-{
-  "articles": [
-    {
-      "id": "1",
-      "title": "Revolutionary AI Breakthrough Changes Everything",
-      "content": "Full article content here...",
-      "summary": "Scientists announce a major breakthrough in artificial intelligence that could revolutionize how we interact with technology.",
-      "category": "Technology",
-      "author": "Dr. Jane Smith",
-      "publication_date": "2024-01-15T10:30:00Z",
-      "source_url": "https://example.com/article-1",
-      "image_url": "https://example.com/image1.jpg"
-    }
-  ]
-}
-```
-
-## 🎨 Design Requirements
-
-### UI/UX Guidelines
-- **Clean, modern design** following current web standards
-- **Consistent color scheme** and typography
-- **Intuitive navigation** and user flow
-- **Good contrast ratios** for accessibility
-- **Loading spinners** and skeleton screens
-- **Error message handling**
-
-### Responsive Breakpoints
-- **Mobile:** 320px - 768px
-- **Tablet:** 768px - 1024px
-- **Desktop:** 1024px+
-
-### Component Structure
-```
-src/
-├── components/
-│   ├── ArticleCard.jsx
-│   ├── ArticleDetail.jsx
-│   ├── SearchFilter.jsx
-│   ├── Navigation.jsx
-│   ├── Layout.jsx
-│   └── LoadingSpinner.jsx
-├── pages/
-│   ├── HomePage.jsx
-│   └── ArticlePage.jsx
-├── hooks/
-│   └── useArticles.js
-├── utils/
-│   └── dateUtils.js
-└── styles/
-    └── globals.css
-```
+**Future Research Directions:**
+- What additional data points would enhance analysis?
+- How would you scale this analysis to thousands of articles?
+- What automation opportunities exist for data collection?
+- What advanced analytics could provide deeper insights?
 
 ## 📤 Deliverables
 
-### 1. Source Code
-- **Complete React/Next.js application**
-- **All required components**
-- **Proper file organization**
-- **Package.json with dependencies**
+### 1. Structured Dataset
+- **CSV/Excel file** with all collected articles
+- **Data dictionary** explaining each field
+- **Collection methodology** documentation
+- **Source list** with URLs and credibility assessment
 
-### 2. Styling & Design
-- **Responsive CSS implementation**
-- **Modern, clean visual design**
-- **Consistent styling across components**
-- **Mobile-first approach**
+### 2. Analysis Report
+- **Data overview** with summary statistics
+- **Visual charts and graphs** (minimum 5 charts)
+- **Trend analysis** findings
+- **Quality assessment** of collected data
 
-### 3. Functionality Demo
-- **Working application** with all features
-- **Sample data** or API integration
-- **Error handling demonstrations**
-- **Responsive behavior showcase**
+### 3. Insights Document
+- **Executive summary** of key findings
+- **Detailed analysis** with supporting evidence
+- **Strategic recommendations** based on data
+- **Methodology explanation** and limitations
 
-### 4. Documentation
-- **README.md** with setup instructions
-- **Component documentation** explaining key components
-- **Design decisions** explanation
-- **Future improvements** roadmap
-
-### 5. Technical Explanation (400-600 words)
-Address these questions:
-- Why did you choose your component structure?
-- How did you handle state management?
-- What accessibility considerations did you implement?
-- How would you optimize performance for 1000+ articles?
-- What responsive design challenges did you face?
+### 4. Visual Dashboard (Optional Bonus)
+- **Dashboard mockup** or interactive visualization
+- **Key metrics** prominently displayed
+- **Filtering capabilities** demonstration
+- **User-friendly presentation** of insights
 
 ## 🎯 Evaluation Criteria
 
-### Code Quality & Architecture (30%)
-- **Component design:** Reusable, well-structured components
-- **React best practices:** Proper hooks usage, performance optimization
-- **Code organization:** Clear file structure and naming
-- **Error handling:** Graceful error management
+### Data Collection Quality (25%)
+- **Completeness:** All required fields populated accurately
+- **Consistency:** Standardized formatting and categorization
+- **Accuracy:** Valid URLs, correct dates, proper classifications
+- **Volume:** Adequate sample size for meaningful analysis
 
-### UI/UX Design (25%)
-- **Visual appeal:** Modern, clean design
-- **User experience:** Intuitive navigation and interaction
-- **Responsive design:** Works well on all device sizes
-- **Accessibility:** Basic accessibility considerations
+### Analysis Depth & Accuracy (30%)
+- **Statistical rigor:** Proper application of analytical methods
+- **Chart quality:** Clear, informative visualizations
+- **Pattern recognition:** Identification of meaningful trends
+- **Methodology:** Sound analytical approach and documentation
 
-### Functionality (25%)
-- **Feature completeness:** All required features working
-- **Search and filtering:** Proper implementation
-- **Navigation:** Smooth user flow
-- **Data handling:** Proper data display and management
+### Insights Quality (25%)
+- **Actionability:** Practical recommendations based on findings
+- **Evidence-based conclusions:** Insights supported by data
+- **Strategic thinking:** Connection between analysis and business value
+- **Critical evaluation:** Honest assessment of limitations
 
-### Technical Implementation (20%)
-- **React proficiency:** Proper use of React concepts
-- **Performance:** Efficient rendering and updates
-- **State management:** Appropriate state handling
-- **Documentation:** Clear setup and component documentation
+### Presentation & Communication (20%)
+- **Clarity:** Clear, professional documentation
+- **Visual appeal:** Effective use of charts and formatting
+- **Organization:** Logical flow and structure
+- **Executive communication:** Appropriate for stakeholder presentation
 
-## 🛠️ Recommended Technologies
+## 🛠️ Recommended Tools
 
-### Core Framework
-- **React 18+** with hooks
-- **Next.js** (for SSR/routing bonus points)
-- **Create React App** (quick setup)
+### Data Collection
+- **Manual collection:** Browser bookmarking and note-taking
+- **Simple scraping:** Browser extensions for data capture
+- **Organization:** Excel, Google Sheets for immediate structuring
+- **Documentation:** Clear tracking of sources and collection dates
 
-### Styling Options
-- **CSS Modules** for scoped styling
-- **Styled Components** for CSS-in-JS
-- **Tailwind CSS** for utility-first CSS
-- **SCSS/SASS** for enhanced CSS
-- **Emotion** for CSS-in-JS
+### Data Analysis
+- **Spreadsheet software:** Excel, Google Sheets (advanced functions)
+- **Statistical software:** R, Python (pandas, numpy) if experienced
+- **Business intelligence:** Tableau Public, Power BI (free versions)
+- **Online tools:** Google Analytics, basic charting tools
 
-### UI Libraries (Optional)
-- **Material-UI (MUI)**
-- **Ant Design**
-- **Chakra UI**
-- **React Bootstrap**
+### Visualization
+- **Built-in charts:** Excel/Google Sheets charting features
+- **Online platforms:** Canva, Google Charts, Chart.js
+- **Advanced tools:** Tableau Public, Power BI, Python matplotlib
+- **Dashboard mockups:** Figma, Canva, PowerPoint
 
-### State Management
-- **React Context + useReducer**
-- **Zustand** (lightweight)
-- **Redux Toolkit** (complex state)
+### Documentation
+- **Word processing:** Google Docs, Microsoft Word
+- **Presentation:** PowerPoint, Google Slides
+- **PDF creation:** For final report compilation
+- **Version control:** Clear file naming and organization
 
-## 📚 Bonus Points
+## 📊 Sample Data Structure
 
-- **Performance optimization:** Lazy loading, memoization, virtualization
-- **Advanced animations:** Smooth transitions and micro-interactions
-- **PWA features:** Service worker, offline support
-- **Testing:** Unit tests with Jest/React Testing Library
-- **TypeScript:** Type safety implementation
-- **Dark mode:** Theme switching functionality
-- **Accessibility:** WCAG compliance, screen reader support
-- **SEO optimization:** Meta tags, structured data
-- **Analytics:** User interaction tracking setup
-
-## 💡 Component Examples
-
-### Article Card Component
-```jsx
-function ArticleCard({ article, onClick }) {
-  return (
-    <div className="article-card" onClick={() => onClick(article.id)}>
-      <div className="article-header">
-        <span className="category-badge">{article.category}</span>
-        <span className="publish-date">{formatDate(article.publication_date)}</span>
-      </div>
-      <h3 className="article-title">{article.title}</h3>
-      <p className="article-summary">{article.summary}</p>
-      <div className="article-footer">
-        <span className="author">By {article.author}</span>
-        <button className="read-more-btn">Read More</button>
-      </div>
-    </div>
-  );
-}
+```csv
+article_id,title,source,author,publication_date,category,url,summary,country,language,word_count
+001,"AI Breakthrough in Medical Diagnosis","TechNews Daily","Dr. Jane Smith","2024-01-15 14:30:00","Technology & Innovation","https://technews.com/ai-medical","Scientists develop AI system for early cancer detection...","USA","English",850
+002,"Climate Summit Reaches Agreement","Global Times","Michael Chen","2024-01-15 09:15:00","Environment & Climate","https://globaltimes.com/climate","World leaders agree on new carbon reduction targets...","International","English",1200
+003,"Market Volatility Hits Tech Stocks","Financial Report","Sarah Johnson","2024-01-14 16:45:00","Business & Economics","https://finreport.com/tech-stocks","Technology sector faces uncertainty amid rate changes...","USA","English",950
 ```
+
+## 📈 Analysis Examples
+
+### Distribution Chart Example
+```
+Category Distribution:
+Technology & Innovation: 18% (9 articles)
+Politics & Government: 16% (8 articles)
+Business & Economics: 14% (7 articles)
+World News: 12% (6 articles)
+Health & Medicine: 10% (5 articles)
+[Continue for all categories...]
+```
+
+### Timeline Analysis Example
+```
+Daily Publication Pattern:
+Monday: 8 articles
+Tuesday: 12 articles
+Wednesday: 7 articles
+Thursday: 10 articles
+Friday: 13 articles
+[Weekend patterns...]
+```
+
+## 📚 Bonus Analysis Opportunities
+
+### Advanced Analytics
+- **Sentiment analysis:** Manual assessment of article tone
+- **Readability analysis:** Flesch-Kincaid or similar scoring
+- **Source credibility scoring:** Assessment of publication reliability
+- **Cross-referencing:** Finding stories covered by multiple sources
+- **Keyword frequency:** Most common terms across categories
+
+### Comparative Analysis
+- **Source comparison:** Different outlets' coverage patterns
+- **Geographic comparison:** Regional news focus differences
+- **Temporal comparison:** Weekday vs. weekend news patterns
+- **Category cross-analysis:** Overlap between different topics
+
+## 💡 Sample Insights
+
+### Example Finding
+*"Technology news articles average 1,200 words compared to 800 words for sports articles, suggesting readers expect more detailed technical coverage. However, technology articles also show 40% higher engagement rates, indicating this detailed approach is effective for audience retention."*
+
+### Strategic Recommendation Example
+*"Based on the analysis showing 65% of collected articles focus on US domestic issues, an international news aggregation platform should actively seek diverse geographic sources to provide balanced global coverage. Priority should be given to established European and Asian publications to fill content gaps."*
 
 ## 📥 Submission Instructions
 
-1. **Create a project folder** named `frontend-web-submission-[your-name]`
-2. **Include all files:**
-   - Complete React application
-   - README.md with setup instructions
-   - Package.json and lock files
-   - Any additional assets or documentation
-3. **Test thoroughly** on different devices and browsers
-4. **Document your approach** and any challenges faced
+1. **Create comprehensive package** named `data-analysis-submission-[your-name]`
+2. **Organize files:**
+   ```
+   data-analysis-submission-john-doe/
+   ├── dataset/
+   │   ├── news-articles-dataset.csv
+   │   ├── data-dictionary.pdf
+   │   └── collection-methodology.md
+   ├── analysis/
+   │   ├── statistical-analysis.xlsx
+   │   ├── charts-and-graphs/
+   │   └── analysis-report.pdf
+   ├── insights/
+   │   ├── insights-document.pdf
+   │   └── recommendations.md
+   ├── bonus-dashboard/ (optional)
+   └── README.md
+   ```
+3. **Include executive summary** in README
+4. **Ensure all files are accessible** and properly formatted
 
 ## ❌ What NOT to Do
 
-- Don't use inline styles everywhere (organize your CSS)
-- Don't ignore responsive design
-- Don't skip error handling
-- Don't hardcode data without proper structure
-- Don't forget accessibility basics
-- Don't submit without testing on mobile
+- Don't fabricate or artificially generate data
+- Don't collect data from only one source or category
+- Don't ignore data quality issues without documentation
+- Don't create charts that are misleading or unclear
+- Don't make recommendations without supporting evidence
+- Don't skip the methodology documentation
+- Don't submit without checking data accuracy
+- Don't copy/paste articles without proper attribution
+
+## 🔍 Data Quality Checklist
+
+Before submission, verify:
+- [ ] All required fields completed for each article
+- [ ] Consistent date formatting across dataset
+- [ ] Valid, working URLs for all articles
+- [ ] Proper category classification using predefined list
+- [ ] No duplicate articles in dataset
+- [ ] Accurate word counts and summaries
+- [ ] Clear documentation of collection process
+- [ ] Statistical calculations verified for accuracy
 
 ---
 
-**Show us your frontend skills and create something beautiful! We're excited to see your approach to modern web development. 🚀**
+**Show us your analytical thinking and attention to detail! We want to see how you approach data problems and extract meaningful insights from real-world information. 🚀**
