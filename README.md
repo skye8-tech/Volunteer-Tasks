@@ -1,337 +1,308 @@
-# 📰 News Aggregation & Intelligence Platform - Volunteer Assessment Tasks
+# 🏛️ System Architecture & Engineering Team Assessment
 
-Welcome to the **News Aggregation & Intelligence Platform** project! This repository contains assessment tasks designed to evaluate technical skills across different teams through a realistic news aggregation system.
+## Task: Architecture Design for News Aggregation Platform
 
-## 🎯 Project Overview
+**Estimated Time:** 6-8 hours  
+**Difficulty:** Advanced
 
-The platform collects news articles from various online sources, processes them, classifies them, stores them, and presents them through web/mobile interfaces. Users can search, filter, save articles, and receive notifications when new articles match their interests.
+## 🎯 Objective
 
-## 🏗️ Repository Structure
+Design comprehensive system architectures for different aspects of a news aggregation platform, demonstrating your understanding of distributed systems, scalability, and engineering best practices.
 
-Each team has their own branch with specific tasks and requirements:
+## 📋 Three Architecture Tasks
 
-### 📊 Available Team Branches
-
-| Team | Branch Name | Focus Area | Skills Assessed |
-|------|-------------|------------|-----------------|
-| 🤖 AI/Data/ML | `ai-ml-team` | News Extraction & Classification | Web scraping, NLP, Data processing, Classification |
-| ⚙️ Backend | `backend-team` | News Article Management API | REST APIs, Database design, CRUD operations |
-| � Frontend Web | `frontend-web-team` | News Browser Interface | React/Next.js, UI/UX, Component design |
-| 📱 Mobile | `mobile-team` | News Mobile App | Mobile development, Local storage, Navigation |
-| 🏛️ System Design | `system-architecture-team` | Architecture & Design | System design, Scalability, Distributed systems |
-| 🧪 Quality Assurance | `qa-team` | QA Planning & Testing | Test planning, Bug reporting, Quality processes |
-| 📈 Project Management | `pm-marketing-team` | Strategy & Planning | Project planning, Market research, Roadmapping |
-| 📊 Data Analysis | `data-analysis-team` | Data Collection & Analysis | Data processing, Analysis, Insights generation |
-
-## 🚀 Getting Started
-
-### For Volunteers:
-
-1. **Choose your team** based on your skills and interests
-2. **Switch to your team's branch**:
-   ```bash
-   git checkout [branch-name]
-   ```
-3. **Read the detailed README** in your branch for specific requirements
-4. **Complete the assigned tasks** following the guidelines provided
-5. **Submit your work** as instructed in your team's README
-
-### For Assessors:
-
-1. **Review submissions** in each team's branch
-2. **Use the evaluation criteria** provided in each team's README
-3. **Provide feedback** using the structured format included
-
-## 📋 General Guidelines
-
-### ⏰ Time Allocation
-- Most tasks are designed to take **4-8 hours** for completion
-- Focus on **quality over quantity**
-- Document your **thought process** and **decisions**
-
-### 📤 Submission Format
-- Create a **pull request** from your team branch to main
-- Include all **deliverables** specified in your team's README
-- Add a **summary** of your approach and any assumptions made
-
-### 🎯 Evaluation Criteria
-Each team has specific evaluation criteria, but all submissions will be assessed on:
-- **Technical competency** appropriate to the role
-- **Code quality** and documentation (where applicable)
-- **Problem-solving approach**
-- **Communication** and explanation of solutions
-
-## 📂 Team README Files (Available in Main Branch)
-
-If you want to preview the tasks before switching branches:
-- `AI-ML-TEAM-README.md` - AI/Data/ML team tasks
-- `BACKEND-TEAM-README.md` - Backend engineering tasks
-- `FRONTEND-WEB-TEAM-README.md` - Frontend web development tasks
-- `MOBILE-TEAM-README.md` - Mobile development tasks
-- `SYSTEM-ARCHITECTURE-TEAM-README.md` - System design tasks
-- `QA-TEAM-README.md` - Quality assurance tasks
-- `PM-MARKETING-TEAM-README.md` - Project management tasks
-- `DATA-ANALYSIS-TEAM-README.md` - Data analysis tasks
-
-## 🤝 Support
-
-If you have questions:
-- Check your **team's README** first for detailed instructions
-- Review the **examples** provided in your branch
-- Contact the assessment team for clarification
-
-## 📜 License
-
-This project is for assessment purposes only. All code and documentation created should be original work or properly attributed.
+**Choose TWO of the three tasks below** based on your interests and expertise.
 
 ---
 
-**Good luck with your assessment! We're excited to see your solutions. 🚀**
-  - Category badge
-  - Author name (if available)
-  - Read more button
-- **Responsive grid layout** (3 columns desktop, 2 tablet, 1 mobile)
-- **Loading states** for better UX
-- **Empty state** handling
+## 🏗️ Task 1: Complete System Architecture Design
 
-#### 2. Article Detail Page
-- **Full article display** with:
-  - Complete title
-  - Full content
-  - Publication date and author
-  - Category
-  - Back to list navigation
-  - Share button (bonus)
-  - Related articles section (bonus)
+### Challenge
+Design the overall architecture for a news aggregation platform that handles:
+- **1 million articles per day** from 500+ news sources
+- **100,000 concurrent users**
+- **Real-time updates** for breaking news
+- **Global user base** across multiple regions
 
-#### 3. Filter & Search Panel
-- **Category filter dropdown** with all available categories
-- **Search bar** for keyword searching
-- **Clear filters** button
-- **Active filter indicators**
-- **Results counter** ("Showing 24 of 156 articles")
+### Requirements
 
-#### 4. Navigation & Layout
-- **Header** with logo/brand and navigation
-- **Mobile-friendly hamburger menu**
-- **Footer** with basic information
-- **Breadcrumbs** for better navigation
+#### High-Level Architecture
+- **System components** and their interactions
+- **Data flow** from external sources to end users
+- **Service boundaries** and communication patterns
+- **Technology stack** recommendations
+- **Deployment architecture** (cloud/on-premise considerations)
 
-### Technical Requirements
+#### Scalability Design
+- **Horizontal scaling** strategy for each component
+- **Database partitioning/sharding** approach
+- **Caching strategy** at multiple levels
+- **Load balancing** and traffic distribution
+- **Auto-scaling** policies and triggers
 
-#### Framework & Setup
-- **React** (preferred) or **Next.js**
-- **Modern CSS** (Flexbox/Grid, CSS Modules, Styled Components, or Tailwind CSS)
-- **Responsive design** for mobile, tablet, and desktop
-- **Clean component architecture**
+#### Performance Considerations
+- **Response time targets** for different operations
+- **Throughput requirements** for news ingestion
+- **Storage optimization** for large content volumes
+- **CDN strategy** for global content delivery
+- **Database optimization** techniques
 
-#### State Management
-- **useState/useReducer** for local state
-- **Context API** or state management library (Redux/Zustand) for global state
-- **Data fetching** with proper loading and error states
+### Deliverables
+1. **Architecture Diagram** (high-level system overview)
+2. **Component Diagram** (detailed service breakdown)
+3. **Data Flow Diagram** (how data moves through the system)
+4. **Technology Stack Document** (justification for each choice)
+5. **Scaling Strategy Document** (how to handle growth)
+6. **Performance Analysis** (bottlenecks and optimization strategies)
 
-#### Data Source
-You can use **any of these options:**
-1. **Mock JSON file** with sample articles (provided below)
-2. **Public news API** (NewsAPI, Guardian API, etc.)
-3. **Local API** you create for testing
-4. **Static data** in JavaScript files
+---
 
-## 📊 Sample Data Structure
+## 🔔 Task 2: Real-Time Notification Engine Design
 
-```json
-{
-  "articles": [
-    {
-      "id": "1",
-      "title": "Revolutionary AI Breakthrough Changes Everything",
-      "content": "Full article content here...",
-      "summary": "Scientists announce a major breakthrough in artificial intelligence that could revolutionize how we interact with technology.",
-      "category": "Technology",
-      "author": "Dr. Jane Smith",
-      "publication_date": "2024-01-15T10:30:00Z",
-      "source_url": "https://example.com/article-1",
-      "image_url": "https://example.com/image1.jpg"
-    }
-  ]
-}
-```
+### Challenge
+Design a notification system that delivers personalized news alerts to users based on their interests, handling:
+- **10 million registered users**
+- **Real-time delivery** within 30 seconds of article publication
+- **Personalization** based on user preferences
+- **Multiple delivery channels** (push, email, SMS)
+- **High availability** with minimal downtime
 
-## 🎨 Design Requirements
+### Requirements
 
-### UI/UX Guidelines
-- **Clean, modern design** following current web standards
-- **Consistent color scheme** and typography
-- **Intuitive navigation** and user flow
-- **Good contrast ratios** for accessibility
-- **Loading spinners** and skeleton screens
-- **Error message handling**
+#### Event-Driven Architecture
+- **Event sourcing** for article updates
+- **Message queuing** strategy
+- **Event processing** pipeline design
+- **Dead letter handling** for failed notifications
+- **Event replay** capability for system recovery
 
-### Responsive Breakpoints
-- **Mobile:** 320px - 768px
-- **Tablet:** 768px - 1024px
-- **Desktop:** 1024px+
+#### Personalization Engine
+- **User preference** modeling and storage
+- **Content matching** algorithms
+- **ML integration** for improving relevance
+- **A/B testing** framework for notification optimization
+- **User feedback loop** integration
 
-### Component Structure
-```
-src/
-├── components/
-│   ├── ArticleCard.jsx
-│   ├── ArticleDetail.jsx
-│   ├── SearchFilter.jsx
-│   ├── Navigation.jsx
-│   ├── Layout.jsx
-│   └── LoadingSpinner.jsx
-├── pages/
-│   ├── HomePage.jsx
-│   └── ArticlePage.jsx
-├── hooks/
-│   └── useArticles.js
-├── utils/
-│   └── dateUtils.js
-└── styles/
-    └── globals.css
-```
+#### Delivery Infrastructure
+- **Multi-channel delivery** architecture
+- **Rate limiting** to prevent spam
+- **Delivery tracking** and analytics
+- **Fallback mechanisms** for failed deliveries
+- **Unsubscribe and preference** management
 
-## 📤 Deliverables
+### Deliverables
+1. **Event Architecture Diagram** (event flow and processing)
+2. **Notification Pipeline Design** (from trigger to delivery)
+3. **Personalization Algorithm** (matching logic explanation)
+4. **Delivery Channel Strategy** (multi-channel coordination)
+5. **Monitoring & Analytics Plan** (tracking delivery success)
+6. **Scalability Analysis** (handling notification volume growth)
 
-### 1. Source Code
-- **Complete React/Next.js application**
-- **All required components**
-- **Proper file organization**
-- **Package.json with dependencies**
+---
 
-### 2. Styling & Design
-- **Responsive CSS implementation**
-- **Modern, clean visual design**
-- **Consistent styling across components**
-- **Mobile-first approach**
+## 🕷️ Task 3: Distributed News Crawling Pipeline Design
 
-### 3. Functionality Demo
-- **Working application** with all features
-- **Sample data** or API integration
-- **Error handling demonstrations**
-- **Responsive behavior showcase**
+### Challenge
+Design a distributed crawling system that efficiently collects news from multiple sources while being respectful and resilient:
+- **500+ news sources** with different structures
+- **Rate limiting compliance** for each source
+- **Fault tolerance** and recovery mechanisms
+- **Real-time processing** of new articles
+- **Anti-detection** and blocking prevention
 
-### 4. Documentation
-- **README.md** with setup instructions
-- **Component documentation** explaining key components
-- **Design decisions** explanation
-- **Future improvements** roadmap
+### Requirements
 
-### 5. Technical Explanation (400-600 words)
-Address these questions:
-- Why did you choose your component structure?
-- How did you handle state management?
-- What accessibility considerations did you implement?
-- How would you optimize performance for 1000+ articles?
-- What responsive design challenges did you face?
+#### Crawler Architecture
+- **Distributed crawler** design with worker nodes
+- **Source management** and configuration system
+- **Rate limiting** enforcement per source
+- **Content parsing** and normalization pipeline
+- **Duplicate detection** and deduplication strategy
+
+#### Resilience & Reliability
+- **Failure handling** for unreachable sources
+- **Circuit breaker** pattern implementation
+- **Retry strategies** with exponential backoff
+- **Health monitoring** for crawler instances
+- **Data consistency** across distributed crawlers
+
+#### Processing Pipeline
+- **Content extraction** and cleaning stages
+- **Data validation** and quality checks
+- **Classification pipeline** integration
+- **Storage optimization** for crawled content
+- **Monitoring and alerting** for pipeline health
+
+### Deliverables
+1. **Crawler Architecture Diagram** (distributed system design)
+2. **Pipeline Stages Document** (detailed processing steps)
+3. **Rate Limiting Strategy** (respectful crawling approach)
+4. **Fault Tolerance Plan** (handling failures and recovery)
+5. **Monitoring Strategy** (health checks and alerting)
+6. **Anti-Detection Techniques** (ethical crawling practices)
+
+---
+
+## 📤 Submission Requirements
+
+### For Each Chosen Task
+
+#### 1. Architecture Documentation (40%)
+- **Clear diagrams** using tools like Lucidchart, Draw.io, or similar
+- **Component specifications** with responsibilities
+- **Interface definitions** between components
+- **Data models** and schema designs
+
+#### 2. Technical Justification (30%)
+- **Technology choices** with reasoning
+- **Trade-off analysis** for major decisions
+- **Alternative approaches** considered and rejected
+- **Scalability rationale** for chosen solutions
+
+#### 3. Implementation Strategy (20%)
+- **Deployment plan** and infrastructure requirements
+- **Development phases** and milestone delivery
+- **Testing strategy** for the proposed system
+- **Migration plan** (if replacing existing systems)
+
+#### 4. Operational Considerations (10%)
+- **Monitoring and alerting** strategy
+- **Backup and disaster recovery** plans
+- **Security considerations** and compliance
+- **Cost optimization** approaches
 
 ## 🎯 Evaluation Criteria
 
-### Code Quality & Architecture (30%)
-- **Component design:** Reusable, well-structured components
-- **React best practices:** Proper hooks usage, performance optimization
-- **Code organization:** Clear file structure and naming
-- **Error handling:** Graceful error management
+### System Design Knowledge (35%)
+- **Distributed systems** understanding
+- **Scalability patterns** and practices
+- **Performance optimization** techniques
+- **Technology stack** appropriateness
 
-### UI/UX Design (25%)
-- **Visual appeal:** Modern, clean design
-- **User experience:** Intuitive navigation and interaction
-- **Responsive design:** Works well on all device sizes
-- **Accessibility:** Basic accessibility considerations
+### Problem-Solving Approach (25%)
+- **Requirements analysis** and breakdown
+- **Trade-off evaluation** and decision-making
+- **Edge case consideration**
+- **Practical solution** feasibility
 
-### Functionality (25%)
-- **Feature completeness:** All required features working
-- **Search and filtering:** Proper implementation
-- **Navigation:** Smooth user flow
-- **Data handling:** Proper data display and management
+### Communication & Documentation (25%)
+- **Clear visual representation** of designs
+- **Comprehensive documentation** quality
+- **Technical justification** clarity
+- **Presentation** of complex concepts
 
-### Technical Implementation (20%)
-- **React proficiency:** Proper use of React concepts
-- **Performance:** Efficient rendering and updates
-- **State management:** Appropriate state handling
-- **Documentation:** Clear setup and component documentation
+### Engineering Excellence (15%)
+- **Best practices** incorporation
+- **Operational considerations** inclusion
+- **Security and compliance** awareness
+- **Future-proofing** and adaptability
 
-## 🛠️ Recommended Technologies
+## 🛠️ Recommended Tools
 
-### Core Framework
-- **React 18+** with hooks
-- **Next.js** (for SSR/routing bonus points)
-- **Create React App** (quick setup)
+### Diagramming Tools
+- **Lucidchart** (comprehensive diagramming)
+- **Draw.io/Diagrams.net** (free, web-based)
+- **Miro/Mural** (collaborative whiteboarding)
+- **Visio** (Microsoft ecosystem)
+- **PlantUML** (code-based diagrams)
 
-### Styling Options
-- **CSS Modules** for scoped styling
-- **Styled Components** for CSS-in-JS
-- **Tailwind CSS** for utility-first CSS
-- **SCSS/SASS** for enhanced CSS
-- **Emotion** for CSS-in-JS
+### Architecture References
+- **AWS Well-Architected Framework**
+- **Google Cloud Architecture Center**
+- **Azure Architecture Center**
+- **Netflix Tech Blog** (scaling examples)
+- **High Scalability** (case studies)
 
-### UI Libraries (Optional)
-- **Material-UI (MUI)**
-- **Ant Design**
-- **Chakra UI**
-- **React Bootstrap**
+### Documentation Format
+- **Markdown** files with embedded images
+- **Confluence** pages (if available)
+- **Google Docs/Notion** with proper formatting
+- **PDF compilation** of all documents
 
-### State Management
-- **React Context + useReducer**
-- **Zustand** (lightweight)
-- **Redux Toolkit** (complex state)
+## 📚 Architecture Patterns to Consider
 
-## 📚 Bonus Points
+### System Design Patterns
+- **Microservices** architecture
+- **Event-driven** architecture
+- **CQRS** (Command Query Responsibility Segregation)
+- **Saga** pattern for distributed transactions
+- **Circuit breaker** for resilience
+- **API Gateway** pattern
 
-- **Performance optimization:** Lazy loading, memoization, virtualization
-- **Advanced animations:** Smooth transitions and micro-interactions
-- **PWA features:** Service worker, offline support
-- **Testing:** Unit tests with Jest/React Testing Library
-- **TypeScript:** Type safety implementation
-- **Dark mode:** Theme switching functionality
-- **Accessibility:** WCAG compliance, screen reader support
-- **SEO optimization:** Meta tags, structured data
-- **Analytics:** User interaction tracking setup
+### Data Patterns
+- **Database per service**
+- **Event sourcing**
+- **Data lake** architecture
+- **Lambda architecture** (batch + stream processing)
+- **Polyglot persistence**
 
-## 💡 Component Examples
+### Scaling Patterns
+- **Horizontal pod autoscaling**
+- **Database sharding**
+- **Read replicas**
+- **Content delivery networks**
+- **Edge computing**
 
-### Article Card Component
-```jsx
-function ArticleCard({ article, onClick }) {
-  return (
-    <div className="article-card" onClick={() => onClick(article.id)}>
-      <div className="article-header">
-        <span className="category-badge">{article.category}</span>
-        <span className="publish-date">{formatDate(article.publication_date)}</span>
-      </div>
-      <h3 className="article-title">{article.title}</h3>
-      <p className="article-summary">{article.summary}</p>
-      <div className="article-footer">
-        <span className="author">By {article.author}</span>
-        <button className="read-more-btn">Read More</button>
-      </div>
-    </div>
-  );
-}
+## 💡 Sample Architecture Components
+
+### Core Services
+```
+┌─────────────────┬─────────────────┬─────────────────┐
+│   Crawler       │   Processing    │   Storage       │
+│   Service       │   Pipeline      │   Layer         │
+├─────────────────┼─────────────────┼─────────────────┤
+│ • Source mgmt   │ • Content parse │ • Article DB    │
+│ • Rate limiting │ • Classification│ • Search index  │
+│ • Scheduling    │ • Deduplication │ • Cache layer   │
+│ • Health check  │ • Validation    │ • File storage  │
+└─────────────────┴─────────────────┴─────────────────┘
+```
+
+### Integration Layer
+```
+┌─────────────────┬─────────────────┬─────────────────┐
+│   API Gateway   │   Message       │   Monitoring    │
+│                 │   Queue         │   System        │
+├─────────────────┼─────────────────┼─────────────────┤
+│ • Routing       │ • Event bus     │ • Metrics       │
+│ • Auth/Auth     │ • Dead letters  │ • Alerting      │
+│ • Rate limiting │ • Retries       │ • Logging       │
+│ • Load balance  │ • Ordering      │ • Tracing       │
+└─────────────────┴─────────────────┴─────────────────┘
 ```
 
 ## 📥 Submission Instructions
 
-1. **Create a project folder** named `frontend-web-submission-[your-name]`
-2. **Include all files:**
-   - Complete React application
-   - README.md with setup instructions
-   - Package.json and lock files
-   - Any additional assets or documentation
-3. **Test thoroughly** on different devices and browsers
-4. **Document your approach** and any challenges faced
+1. **Create a comprehensive folder** named `architecture-submission-[your-name]`
+2. **Organize by task:**
+   ```
+   architecture-submission-john-doe/
+   ├── task-1-system-architecture/
+   │   ├── diagrams/
+   │   ├── documentation/
+   │   └── README.md
+   ├── task-2-notification-engine/
+   │   ├── diagrams/
+   │   ├── documentation/
+   │   └── README.md
+   └── summary.md
+   ```
+3. **Include for each task:**
+   - All architecture diagrams (PNG/JPG format)
+   - Detailed documentation (Markdown/PDF)
+   - README explaining your approach
+4. **Create an overall summary** connecting both tasks
 
 ## ❌ What NOT to Do
 
-- Don't use inline styles everywhere (organize your CSS)
-- Don't ignore responsive design
-- Don't skip error handling
-- Don't hardcode data without proper structure
-- Don't forget accessibility basics
-- Don't submit without testing on mobile
+- Don't design overly complex solutions without justification
+- Don't ignore operational and monitoring concerns
+- Don't forget to address failure scenarios
+- Don't skip trade-off analysis for major decisions
+- Don't use buzzwords without understanding their implications
+- Don't ignore security and compliance requirements
+- Don't design without considering implementation feasibility
 
 ---
 
-**Show us your frontend skills and create something beautiful! We're excited to see your approach to modern web development. 🚀**
+**Show us your systems thinking and engineering judgment! We want to see how you approach large-scale distributed system design. 🚀**
