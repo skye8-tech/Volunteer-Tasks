@@ -1,251 +1,293 @@
-# ⚙️ Backend Engineering Team Assessment
+# 📊 Data Analysis Team Assessment
 
-## Task: News Article Management API
+## Task: News Data Collection & Analysis Project
 
 **Estimated Time:** 6-8 hours  
 **Difficulty:** Intermediate
 
 ## 🎯 Objective
 
-Build a robust backend service that manages news articles with full CRUD operations, filtering, search capabilities, and proper data validation.
+Demonstrate your data analysis skills by collecting, structuring, analyzing, and deriving insights from news article data. This task evaluates your ability to work with real-world data, perform meaningful analysis, and communicate findings effectively.
 
-## 📋 Requirements
+## 📋 Project Requirements
 
-### Core API Endpoints
+### Phase 1: Data Collection & Structuring (40%)
 
-#### 1. Article Management (CRUD)
-```
-POST   /api/articles          - Create new article
-GET    /api/articles          - List all articles (with pagination)
-GET    /api/articles/:id      - Get specific article
-PUT    /api/articles/:id      - Update article
-DELETE /api/articles/:id      - Delete article
-```
+#### Manual Data Collection Task
+**Collect 30-50 news articles** from various online sources over the past 2 weeks.
 
-#### 2. Enhanced Features
-```
-GET    /api/articles?category=Technology    - Filter by category
-GET    /api/articles?search=keyword         - Keyword search
-GET    /api/articles?page=2&limit=10        - Pagination
-GET    /api/categories                      - List all categories
-GET    /api/articles/stats                  - Basic statistics
-```
+**Required Data Points for Each Article:**
+- **Article Title** (complete headline)
+- **Publication Source** (website/publication name)
+- **Author Name** (if available)
+- **Publication Date** (date and time if available)
+- **Category/Topic** (classify into predefined categories)
+- **Article URL** (direct link to article)
+- **Summary/Snippet** (first paragraph or 100-150 characters)
+- **Country/Region** (geographic focus of the news)
+- **Language** (article language)
+- **Word Count** (approximate article length)
 
-### Data Model
+#### Data Structure Requirements
+**Create a clean, structured dataset using CSV or Excel format with:**
+- **Consistent formatting** across all entries
+- **Data validation** (no missing required fields)
+- **Standardized categories** (use predefined list below)
+- **Date formatting** (consistent date/time format)
+- **URL validation** (working links)
 
-**Article Schema:**
-```json
-{
-  "id": "string (UUID or auto-increment)",
-  "title": "string (required, max 200 chars)",
-  "content": "string (required, min 100 chars)",
-  "summary": "string (required, max 500 chars)",
-  "category": "string (required, enum: Politics, Technology, Business, Education, World, Health, Sports, Entertainment)",
-  "author": "string (optional)",
-  "source_url": "string (optional, valid URL)",
-  "publication_date": "datetime (required)",
-  "created_at": "datetime (auto-generated)",
-  "updated_at": "datetime (auto-generated)",
-  "is_published": "boolean (default: true)",
-  "tags": "array of strings (optional)"
-}
-```
+#### Predefined Categories
+Choose from these categories for consistent classification:
+- Politics & Government
+- Technology & Innovation
+- Business & Economics
+- Health & Medicine
+- Education & Science
+- Sports & Entertainment
+- World News & International
+- Environment & Climate
+- Crime & Safety
+- Arts & Culture
 
-## 🏗️ Technical Requirements
+### Phase 2: Data Analysis & Insights (40%)
 
-### Database Design
-- **Choose any database:** PostgreSQL, MySQL, MongoDB, SQLite
-- **Proper indexing** for search and filter operations
-- **Foreign key constraints** where applicable
-- **Migration scripts** or schema creation scripts
+#### Quantitative Analysis
+Perform and document these analyses:
 
-### API Design
-- **RESTful principles** following HTTP standards
-- **Proper HTTP status codes** (200, 201, 400, 404, 500, etc.)
-- **Consistent response format**
-- **Input validation** with meaningful error messages
-- **CORS support** for frontend integration
+**1. Distribution Analysis**
+- **Category distribution:** Which topics are most/least covered?
+- **Source distribution:** Which publications have most articles in your dataset?
+- **Geographic distribution:** Which countries/regions are most represented?
+- **Publication timeline:** How are articles distributed across the collection period?
 
-### Data Validation
-- **Required field validation**
-- **Data type validation** 
-- **URL format validation** for source_url
-- **Date format validation**
-- **Category enum validation**
-- **Content length validation**
+**2. Content Analysis**
+- **Article length analysis:** Distribution of word counts across categories
+- **Title length patterns:** Average title length by category
+- **Author analysis:** Most prolific authors in your dataset
+- **Language distribution:** If collecting multilingual content
 
-### Error Handling
-- **Graceful error responses**
-- **Meaningful error messages**
-- **Proper HTTP status codes**
-- **Input sanitization**
-- **Database connection error handling**
+**3. Trend Analysis**
+- **Daily publication patterns:** Which days have more news activity?
+- **Category trends over time:** How do different topics fluctuate?
+- **Source activity patterns:** Publication frequency by source
+- **Geographic news focus changes:** Shifting regional attention
+
+#### Statistical Insights
+**Provide descriptive statistics:**
+- Mean, median, mode for numerical data
+- Standard deviation and variance where applicable
+- Correlation analysis between variables (if applicable)
+- Outlier identification and analysis
+
+### Phase 3: Insights & Recommendations (20%)
+
+#### Data-Driven Insights Document
+**Create a 800-1200 word analysis addressing:**
+
+**Key Findings:**
+- What patterns emerged from your data collection?
+- Which categories dominate current news cycles?
+- What geographic or temporal trends did you observe?
+- Are there any surprising insights or outliers?
+
+**Quality Assessment:**
+- What data quality issues did you encounter?
+- How did you handle missing or inconsistent information?
+- What limitations exist in your dataset?
+- How would you improve data collection for better analysis?
+
+**Strategic Recommendations:**
+- Based on your analysis, what content strategy would you recommend?
+- Which news sources should be prioritized for aggregation?
+- What categories deserve more coverage attention?
+- How would you optimize content collection for user engagement?
+
+**Future Research Directions:**
+- What additional data points would enhance analysis?
+- How would you scale this analysis to thousands of articles?
+- What automation opportunities exist for data collection?
+- What advanced analytics could provide deeper insights?
 
 ## 📤 Deliverables
 
-### 1. Source Code
-- **Complete API implementation**
-- **Database schema/migrations**
-- **Configuration files**
-- **Dependency management** (package.json, requirements.txt, etc.)
+### 1. Structured Dataset
+- **CSV/Excel file** with all collected articles
+- **Data dictionary** explaining each field
+- **Collection methodology** documentation
+- **Source list** with URLs and credibility assessment
 
-### 2. Database Schema
-- **Entity Relationship Diagram** (if using relational DB)
-- **Schema creation scripts**
-- **Sample data insertion scripts**
-- **Index optimization explanation**
+### 2. Analysis Report
+- **Data overview** with summary statistics
+- **Visual charts and graphs** (minimum 5 charts)
+- **Trend analysis** findings
+- **Quality assessment** of collected data
 
-### 3. API Documentation
-- **Endpoint documentation** with request/response examples
-- **Authentication requirements** (if implemented)
-- **Error response formats**
-- **Rate limiting information** (if implemented)
+### 3. Insights Document
+- **Executive summary** of key findings
+- **Detailed analysis** with supporting evidence
+- **Strategic recommendations** based on data
+- **Methodology explanation** and limitations
 
-### 4. Setup & Deployment Guide
-- **Installation instructions**
-- **Environment configuration**
-- **Database setup steps**
-- **How to run locally**
-- **Testing instructions**
-
-### 5. Technical Explanation (400-600 words)
-Address these questions:
-- Why did you choose your technology stack?
-- How did you structure your project?
-- What design patterns did you implement?
-- How would you handle scaling to 1M articles?
-- What security considerations did you implement?
+### 4. Visual Dashboard (Optional Bonus)
+- **Dashboard mockup** or interactive visualization
+- **Key metrics** prominently displayed
+- **Filtering capabilities** demonstration
+- **User-friendly presentation** of insights
 
 ## 🎯 Evaluation Criteria
 
-### Code Quality (35%)
-- **Clean architecture:** Well-organized code structure
-- **Best practices:** Following language/framework conventions
-- **Error handling:** Comprehensive error management
-- **Code documentation:** Clear comments and documentation
+### Data Collection Quality (25%)
+- **Completeness:** All required fields populated accurately
+- **Consistency:** Standardized formatting and categorization
+- **Accuracy:** Valid URLs, correct dates, proper classifications
+- **Volume:** Adequate sample size for meaningful analysis
 
-### API Design (25%)
-- **RESTful design:** Proper HTTP methods and status codes
-- **Consistency:** Uniform response formats
-- **Functionality:** All required endpoints working
-- **Validation:** Proper input validation and sanitization
+### Analysis Depth & Accuracy (30%)
+- **Statistical rigor:** Proper application of analytical methods
+- **Chart quality:** Clear, informative visualizations
+- **Pattern recognition:** Identification of meaningful trends
+- **Methodology:** Sound analytical approach and documentation
 
-### Database Design (20%)
-- **Schema design:** Well-structured data model
-- **Performance:** Appropriate indexing strategy
-- **Data integrity:** Proper constraints and validation
-- **Scalability:** Design considerations for growth
+### Insights Quality (25%)
+- **Actionability:** Practical recommendations based on findings
+- **Evidence-based conclusions:** Insights supported by data
+- **Strategic thinking:** Connection between analysis and business value
+- **Critical evaluation:** Honest assessment of limitations
 
-### Documentation & Setup (20%)
-- **API documentation:** Clear endpoint documentation
-- **Setup instructions:** Easy to follow installation guide
-- **Code comments:** Well-commented code
-- **Technical explanation:** Clear reasoning for design choices
+### Presentation & Communication (20%)
+- **Clarity:** Clear, professional documentation
+- **Visual appeal:** Effective use of charts and formatting
+- **Organization:** Logical flow and structure
+- **Executive communication:** Appropriate for stakeholder presentation
 
-## 🛠️ Technology Stack Options
+## 🛠️ Recommended Tools
 
-### Backend Frameworks
-- **Node.js:** Express.js, Fastify, Nest.js
-- **Python:** Django, FastAPI, Flask
-- **PHP:** Laravel, Symfony
-- **Java:** Spring Boot
-- **C#:** ASP.NET Core
-- **Go:** Gin, Echo
-- **Ruby:** Ruby on Rails
+### Data Collection
+- **Manual collection:** Browser bookmarking and note-taking
+- **Simple scraping:** Browser extensions for data capture
+- **Organization:** Excel, Google Sheets for immediate structuring
+- **Documentation:** Clear tracking of sources and collection dates
 
-### Databases
-- **Relational:** PostgreSQL, MySQL, SQLite
-- **NoSQL:** MongoDB, CouchDB
-- **In-memory:** Redis (for caching)
+### Data Analysis
+- **Spreadsheet software:** Excel, Google Sheets (advanced functions)
+- **Statistical software:** R, Python (pandas, numpy) if experienced
+- **Business intelligence:** Tableau Public, Power BI (free versions)
+- **Online tools:** Google Analytics, basic charting tools
 
-### Additional Tools
-- **ORM/ODM:** Sequelize, Prisma, Mongoose, SQLAlchemy
-- **Validation:** Joi, Yup, Pydantic
-- **Testing:** Jest, pytest, PHPUnit
-- **Documentation:** Swagger/OpenAPI, Postman
+### Visualization
+- **Built-in charts:** Excel/Google Sheets charting features
+- **Online platforms:** Canva, Google Charts, Chart.js
+- **Advanced tools:** Tableau Public, Power BI, Python matplotlib
+- **Dashboard mockups:** Figma, Canva, PowerPoint
 
-## 📚 Bonus Points
+### Documentation
+- **Word processing:** Google Docs, Microsoft Word
+- **Presentation:** PowerPoint, Google Slides
+- **PDF creation:** For final report compilation
+- **Version control:** Clear file naming and organization
 
-- **Authentication & Authorization:** JWT implementation
-- **Caching:** Redis caching for frequently accessed data
-- **Rate Limiting:** API rate limiting implementation
-- **Testing:** Comprehensive unit and integration tests
-- **Docker:** Containerized application
-- **Swagger Documentation:** Auto-generated API docs
-- **Database Transactions:** Proper transaction management
-- **Logging:** Structured logging implementation
-- **Health Check Endpoint:** System health monitoring
+## 📊 Sample Data Structure
 
-## 💡 Sample Response Formats
-
-### Success Response
-```json
-{
-  "success": true,
-  "data": {
-    "id": "123",
-    "title": "Breaking: Tech Innovation",
-    "category": "Technology",
-    // ... other fields
-  },
-  "message": "Article created successfully"
-}
+```csv
+article_id,title,source,author,publication_date,category,url,summary,country,language,word_count
+001,"AI Breakthrough in Medical Diagnosis","TechNews Daily","Dr. Jane Smith","2024-01-15 14:30:00","Technology & Innovation","https://technews.com/ai-medical","Scientists develop AI system for early cancer detection...","USA","English",850
+002,"Climate Summit Reaches Agreement","Global Times","Michael Chen","2024-01-15 09:15:00","Environment & Climate","https://globaltimes.com/climate","World leaders agree on new carbon reduction targets...","International","English",1200
+003,"Market Volatility Hits Tech Stocks","Financial Report","Sarah Johnson","2024-01-14 16:45:00","Business & Economics","https://finreport.com/tech-stocks","Technology sector faces uncertainty amid rate changes...","USA","English",950
 ```
 
-### Error Response
-```json
-{
-  "success": false,
-  "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Title is required and must be less than 200 characters",
-    "details": {
-      "field": "title",
-      "value": ""
-    }
-  }
-}
+## 📈 Analysis Examples
+
+### Distribution Chart Example
+```
+Category Distribution:
+Technology & Innovation: 18% (9 articles)
+Politics & Government: 16% (8 articles)
+Business & Economics: 14% (7 articles)
+World News: 12% (6 articles)
+Health & Medicine: 10% (5 articles)
+[Continue for all categories...]
 ```
 
-### Paginated Response
-```json
-{
-  "success": true,
-  "data": {
-    "articles": [...],
-    "pagination": {
-      "current_page": 2,
-      "per_page": 10,
-      "total": 150,
-      "total_pages": 15,
-      "has_next": true,
-      "has_prev": true
-    }
-  }
-}
+### Timeline Analysis Example
 ```
+Daily Publication Pattern:
+Monday: 8 articles
+Tuesday: 12 articles
+Wednesday: 7 articles
+Thursday: 10 articles
+Friday: 13 articles
+[Weekend patterns...]
+```
+
+## 📚 Bonus Analysis Opportunities
+
+### Advanced Analytics
+- **Sentiment analysis:** Manual assessment of article tone
+- **Readability analysis:** Flesch-Kincaid or similar scoring
+- **Source credibility scoring:** Assessment of publication reliability
+- **Cross-referencing:** Finding stories covered by multiple sources
+- **Keyword frequency:** Most common terms across categories
+
+### Comparative Analysis
+- **Source comparison:** Different outlets' coverage patterns
+- **Geographic comparison:** Regional news focus differences
+- **Temporal comparison:** Weekday vs. weekend news patterns
+- **Category cross-analysis:** Overlap between different topics
+
+## 💡 Sample Insights
+
+### Example Finding
+*"Technology news articles average 1,200 words compared to 800 words for sports articles, suggesting readers expect more detailed technical coverage. However, technology articles also show 40% higher engagement rates, indicating this detailed approach is effective for audience retention."*
+
+### Strategic Recommendation Example
+*"Based on the analysis showing 65% of collected articles focus on US domestic issues, an international news aggregation platform should actively seek diverse geographic sources to provide balanced global coverage. Priority should be given to established European and Asian publications to fill content gaps."*
 
 ## 📥 Submission Instructions
 
-1. **Create a repository** or folder named `backend-submission-[your-name]`
-2. **Include all components:**
-   - Source code with clear structure
-   - Database schema and migrations
-   - API documentation
-   - Setup/installation guide
-   - Sample data (optional but helpful)
-3. **Test your API** thoroughly before submission
-4. **Document any assumptions** or limitations
+1. **Create comprehensive package** named `data-analysis-submission-[your-name]`
+2. **Organize files:**
+   ```
+   data-analysis-submission-john-doe/
+   ├── dataset/
+   │   ├── news-articles-dataset.csv
+   │   ├── data-dictionary.pdf
+   │   └── collection-methodology.md
+   ├── analysis/
+   │   ├── statistical-analysis.xlsx
+   │   ├── charts-and-graphs/
+   │   └── analysis-report.pdf
+   ├── insights/
+   │   ├── insights-document.pdf
+   │   └── recommendations.md
+   ├── bonus-dashboard/ (optional)
+   └── README.md
+   ```
+3. **Include executive summary** in README
+4. **Ensure all files are accessible** and properly formatted
 
 ## ❌ What NOT to Do
 
-- Don't skip input validation
-- Don't use plain text passwords (if auth implemented)
-- Don't ignore error handling
-- Don't hardcode configuration values
-- Don't submit without testing all endpoints
-- Don't forget to document your API
+- Don't fabricate or artificially generate data
+- Don't collect data from only one source or category
+- Don't ignore data quality issues without documentation
+- Don't create charts that are misleading or unclear
+- Don't make recommendations without supporting evidence
+- Don't skip the methodology documentation
+- Don't submit without checking data accuracy
+- Don't copy/paste articles without proper attribution
+
+## 🔍 Data Quality Checklist
+
+Before submission, verify:
+- [ ] All required fields completed for each article
+- [ ] Consistent date formatting across dataset
+- [ ] Valid, working URLs for all articles
+- [ ] Proper category classification using predefined list
+- [ ] No duplicate articles in dataset
+- [ ] Accurate word counts and summaries
+- [ ] Clear documentation of collection process
+- [ ] Statistical calculations verified for accuracy
 
 ---
 
-**Show us your backend engineering skills! We're looking forward to seeing your API design and implementation. 🚀**
+**Show us your analytical thinking and attention to detail! We want to see how you approach data problems and extract meaningful insights from real-world information. 🚀**
