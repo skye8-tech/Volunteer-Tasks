@@ -1,337 +1,183 @@
-# 📰 News Aggregation & Intelligence Platform - Volunteer Assessment Tasks
+# 🤖 AI/Data/Machine Learning Team Assessment
 
-Welcome to the **News Aggregation & Intelligence Platform** project! This repository contains assessment tasks designed to evaluate technical skills across different teams through a realistic news aggregation system.
+## Task: News Extraction & Topic Classification Pipeline
 
-## 🎯 Project Overview
+**Estimated Time:** 6-8 hours  
+**Difficulty:** Intermediate to Advanced
 
-The platform collects news articles from various online sources, processes them, classifies them, stores them, and presents them through web/mobile interfaces. Users can search, filter, save articles, and receive notifications when new articles match their interests.
+## 🎯 Objective
 
-## 🏗️ Repository Structure
+Design and implement a pipeline that extracts news articles from a real news website, normalizes the data, and classifies articles by topic.
 
-Each team has their own branch with specific tasks and requirements:
+## 📋 Requirements
 
-### 📊 Available Team Branches
+### A. News Article Scraper
 
-| Team | Branch Name | Focus Area | Skills Assessed |
-|------|-------------|------------|-----------------|
-| 🤖 AI/Data/ML | `ai-ml-team` | News Extraction & Classification | Web scraping, NLP, Data processing, Classification |
-| ⚙️ Backend | `backend-team` | News Article Management API | REST APIs, Database design, CRUD operations |
-| � Frontend Web | `frontend-web-team` | News Browser Interface | React/Next.js, UI/UX, Component design |
-| 📱 Mobile | `mobile-team` | News Mobile App | Mobile development, Local storage, Navigation |
-| 🏛️ System Design | `system-architecture-team` | Architecture & Design | System design, Scalability, Distributed systems |
-| 🧪 Quality Assurance | `qa-team` | QA Planning & Testing | Test planning, Bug reporting, Quality processes |
-| 📈 Project Management | `pm-marketing-team` | Strategy & Planning | Project planning, Market research, Roadmapping |
-| 📊 Data Analysis | `data-analysis-team` | Data Collection & Analysis | Data processing, Analysis, Insights generation |
+**Target:** Choose ONE real news website (suggestions: BBC News, Reuters, CNN, or similar)
 
-## 🚀 Getting Started
+**Extract the following data points:**
+- Article headline/title
+- Publication date
+- Article URL/link
+- Article summary or first paragraph (at least 100 characters)
+- Category (if available on the website)
+- Author name (if available)
 
-### For Volunteers:
+**Requirements:**
+- Extract minimum **20 articles**
+- Handle rate limiting respectfully
+- Include error handling for missing data
+- Respect robots.txt guidelines
 
-1. **Choose your team** based on your skills and interests
-2. **Switch to your team's branch**:
-   ```bash
-   git checkout [branch-name]
-   ```
-3. **Read the detailed README** in your branch for specific requirements
-4. **Complete the assigned tasks** following the guidelines provided
-5. **Submit your work** as instructed in your team's README
+### B. Data Normalization
 
-### For Assessors:
-
-1. **Review submissions** in each team's branch
-2. **Use the evaluation criteria** provided in each team's README
-3. **Provide feedback** using the structured format included
-
-## 📋 General Guidelines
-
-### ⏰ Time Allocation
-- Most tasks are designed to take **4-8 hours** for completion
-- Focus on **quality over quantity**
-- Document your **thought process** and **decisions**
-
-### 📤 Submission Format
-- Create a **pull request** from your team branch to main
-- Include all **deliverables** specified in your team's README
-- Add a **summary** of your approach and any assumptions made
-
-### 🎯 Evaluation Criteria
-Each team has specific evaluation criteria, but all submissions will be assessed on:
-- **Technical competency** appropriate to the role
-- **Code quality** and documentation (where applicable)
-- **Problem-solving approach**
-- **Communication** and explanation of solutions
-
-## 📂 Team README Files (Available in Main Branch)
-
-If you want to preview the tasks before switching branches:
-- `AI-ML-TEAM-README.md` - AI/Data/ML team tasks
-- `BACKEND-TEAM-README.md` - Backend engineering tasks
-- `FRONTEND-WEB-TEAM-README.md` - Frontend web development tasks
-- `MOBILE-TEAM-README.md` - Mobile development tasks
-- `SYSTEM-ARCHITECTURE-TEAM-README.md` - System design tasks
-- `QA-TEAM-README.md` - Quality assurance tasks
-- `PM-MARKETING-TEAM-README.md` - Project management tasks
-- `DATA-ANALYSIS-TEAM-README.md` - Data analysis tasks
-
-## 🤝 Support
-
-If you have questions:
-- Check your **team's README** first for detailed instructions
-- Review the **examples** provided in your branch
-- Contact the assessment team for clarification
-
-## 📜 License
-
-This project is for assessment purposes only. All code and documentation created should be original work or properly attributed.
-
----
-
-**Good luck with your assessment! We're excited to see your solutions. 🚀**
-  - Category badge
-  - Author name (if available)
-  - Read more button
-- **Responsive grid layout** (3 columns desktop, 2 tablet, 1 mobile)
-- **Loading states** for better UX
-- **Empty state** handling
-
-#### 2. Article Detail Page
-- **Full article display** with:
-  - Complete title
-  - Full content
-  - Publication date and author
-  - Category
-  - Back to list navigation
-  - Share button (bonus)
-  - Related articles section (bonus)
-
-#### 3. Filter & Search Panel
-- **Category filter dropdown** with all available categories
-- **Search bar** for keyword searching
-- **Clear filters** button
-- **Active filter indicators**
-- **Results counter** ("Showing 24 of 156 articles")
-
-#### 4. Navigation & Layout
-- **Header** with logo/brand and navigation
-- **Mobile-friendly hamburger menu**
-- **Footer** with basic information
-- **Breadcrumbs** for better navigation
-
-### Technical Requirements
-
-#### Framework & Setup
-- **React** (preferred) or **Next.js**
-- **Modern CSS** (Flexbox/Grid, CSS Modules, Styled Components, or Tailwind CSS)
-- **Responsive design** for mobile, tablet, and desktop
-- **Clean component architecture**
-
-#### State Management
-- **useState/useReducer** for local state
-- **Context API** or state management library (Redux/Zustand) for global state
-- **Data fetching** with proper loading and error states
-
-#### Data Source
-You can use **any of these options:**
-1. **Mock JSON file** with sample articles (provided below)
-2. **Public news API** (NewsAPI, Guardian API, etc.)
-3. **Local API** you create for testing
-4. **Static data** in JavaScript files
-
-## 📊 Sample Data Structure
+**Convert extracted content into a consistent JSON format:**
 
 ```json
 {
   "articles": [
     {
-      "id": "1",
-      "title": "Revolutionary AI Breakthrough Changes Everything",
-      "content": "Full article content here...",
-      "summary": "Scientists announce a major breakthrough in artificial intelligence that could revolutionize how we interact with technology.",
-      "category": "Technology",
-      "author": "Dr. Jane Smith",
+      "id": "unique_identifier",
+      "title": "Article headline",
+      "summary": "First paragraph or summary",
       "publication_date": "2024-01-15T10:30:00Z",
-      "source_url": "https://example.com/article-1",
-      "image_url": "https://example.com/image1.jpg"
+      "source_url": "https://example.com/article",
+      "category": "Technology",
+      "author": "Author Name",
+      "extracted_at": "2024-01-15T12:00:00Z"
     }
   ]
 }
 ```
 
-## 🎨 Design Requirements
+### C. Topic Classification Component
 
-### UI/UX Guidelines
-- **Clean, modern design** following current web standards
-- **Consistent color scheme** and typography
-- **Intuitive navigation** and user flow
-- **Good contrast ratios** for accessibility
-- **Loading spinners** and skeleton screens
-- **Error message handling**
+**Classify each article into ONE of these categories:**
+- Politics
+- Technology
+- Business
+- Education
+- World News
+- Health
+- Sports
+- Entertainment
 
-### Responsive Breakpoints
-- **Mobile:** 320px - 768px
-- **Tablet:** 768px - 1024px
-- **Desktop:** 1024px+
-
-### Component Structure
-```
-src/
-├── components/
-│   ├── ArticleCard.jsx
-│   ├── ArticleDetail.jsx
-│   ├── SearchFilter.jsx
-│   ├── Navigation.jsx
-│   ├── Layout.jsx
-│   └── LoadingSpinner.jsx
-├── pages/
-│   ├── HomePage.jsx
-│   └── ArticlePage.jsx
-├── hooks/
-│   └── useArticles.js
-├── utils/
-│   └── dateUtils.js
-└── styles/
-    └── globals.css
-```
+**Approach Options:**
+- **Rule-based:** Keyword matching, pattern recognition
+- **ML-based:** Use pre-trained models (BERT, spaCy, etc.)
+- **Hybrid:** Combination of both approaches
+- **API-based:** Use external classification services
 
 ## 📤 Deliverables
 
-### 1. Source Code
-- **Complete React/Next.js application**
-- **All required components**
-- **Proper file organization**
-- **Package.json with dependencies**
+### 1. Code Submission
+- **Scraper script** (Python/JavaScript/other)
+- **Classification component**
+- **Data processing pipeline**
+- **Requirements/dependencies file** (requirements.txt, package.json, etc.)
 
-### 2. Styling & Design
-- **Responsive CSS implementation**
-- **Modern, clean visual design**
-- **Consistent styling across components**
-- **Mobile-first approach**
+### 2. Data Output
+- **JSON file** with minimum 20 classified articles
+- **Data quality report** (missing fields, extraction success rate)
 
-### 3. Functionality Demo
-- **Working application** with all features
-- **Sample data** or API integration
-- **Error handling demonstrations**
-- **Responsive behavior showcase**
+### 3. Documentation
+- **README.md** explaining your approach
+- **Setup instructions** to run your code
+- **Classification methodology** explanation
+- **Challenges faced** and how you solved them
+- **Potential improvements** you would make
 
-### 4. Documentation
-- **README.md** with setup instructions
-- **Component documentation** explaining key components
-- **Design decisions** explanation
-- **Future improvements** roadmap
-
-### 5. Technical Explanation (400-600 words)
+### 4. Technical Explanation (500-800 words)
 Address these questions:
-- Why did you choose your component structure?
-- How did you handle state management?
-- What accessibility considerations did you implement?
-- How would you optimize performance for 1000+ articles?
-- What responsive design challenges did you face?
+- Why did you choose your classification approach?
+- How would you handle duplicate articles?
+- How would you scale this to process 10,000 articles daily?
+- What data quality issues did you encounter?
 
 ## 🎯 Evaluation Criteria
 
-### Code Quality & Architecture (30%)
-- **Component design:** Reusable, well-structured components
-- **React best practices:** Proper hooks usage, performance optimization
-- **Code organization:** Clear file structure and naming
-- **Error handling:** Graceful error management
+### Technical Implementation (40%)
+- **Code quality:** Clean, readable, well-structured
+- **Error handling:** Graceful failure management
+- **Efficiency:** Reasonable performance and resource usage
+- **Documentation:** Clear setup and usage instructions
 
-### UI/UX Design (25%)
-- **Visual appeal:** Modern, clean design
-- **User experience:** Intuitive navigation and interaction
-- **Responsive design:** Works well on all device sizes
-- **Accessibility:** Basic accessibility considerations
+### Data Extraction Quality (25%)
+- **Completeness:** All required fields extracted
+- **Accuracy:** Correct data extraction
+- **Volume:** Met minimum article count
+- **Consistency:** Uniform data format
 
-### Functionality (25%)
-- **Feature completeness:** All required features working
-- **Search and filtering:** Proper implementation
-- **Navigation:** Smooth user flow
-- **Data handling:** Proper data display and management
+### Classification Accuracy (20%)
+- **Relevance:** Classifications make logical sense
+- **Consistency:** Similar articles get similar classifications
+- **Methodology:** Sound approach to classification
+- **Innovation:** Creative or advanced techniques used
 
-### Technical Implementation (20%)
-- **React proficiency:** Proper use of React concepts
-- **Performance:** Efficient rendering and updates
-- **State management:** Appropriate state handling
-- **Documentation:** Clear setup and component documentation
+### Problem Solving & Communication (15%)
+- **Approach explanation:** Clear reasoning for technical choices
+- **Challenge handling:** How obstacles were overcome
+- **Scalability thinking:** Understanding of production concerns
+- **Documentation quality:** Clear, comprehensive explanation
 
-## 🛠️ Recommended Technologies
+## 🛠️ Technical Guidelines
 
-### Core Framework
-- **React 18+** with hooks
-- **Next.js** (for SSR/routing bonus points)
-- **Create React App** (quick setup)
+### Recommended Tools
+- **Python:** BeautifulSoup, Scrapy, requests, pandas, scikit-learn, spaCy
+- **JavaScript:** Puppeteer, Cheerio, Playwright
+- **Classification:** scikit-learn, transformers, spaCy, NLTK
 
-### Styling Options
-- **CSS Modules** for scoped styling
-- **Styled Components** for CSS-in-JS
-- **Tailwind CSS** for utility-first CSS
-- **SCSS/SASS** for enhanced CSS
-- **Emotion** for CSS-in-JS
+### Data Storage
+- JSON files for this assessment
+- Consider how you'd structure this for a database
 
-### UI Libraries (Optional)
-- **Material-UI (MUI)**
-- **Ant Design**
-- **Chakra UI**
-- **React Bootstrap**
-
-### State Management
-- **React Context + useReducer**
-- **Zustand** (lightweight)
-- **Redux Toolkit** (complex state)
+### Rate Limiting
+- Add delays between requests (1-2 seconds recommended)
+- Respect the website's robots.txt
+- Monitor for rate limiting responses
 
 ## 📚 Bonus Points
 
-- **Performance optimization:** Lazy loading, memoization, virtualization
-- **Advanced animations:** Smooth transitions and micro-interactions
-- **PWA features:** Service worker, offline support
-- **Testing:** Unit tests with Jest/React Testing Library
-- **TypeScript:** Type safety implementation
-- **Dark mode:** Theme switching functionality
-- **Accessibility:** WCAG compliance, screen reader support
-- **SEO optimization:** Meta tags, structured data
-- **Analytics:** User interaction tracking setup
-
-## 💡 Component Examples
-
-### Article Card Component
-```jsx
-function ArticleCard({ article, onClick }) {
-  return (
-    <div className="article-card" onClick={() => onClick(article.id)}>
-      <div className="article-header">
-        <span className="category-badge">{article.category}</span>
-        <span className="publish-date">{formatDate(article.publication_date)}</span>
-      </div>
-      <h3 className="article-title">{article.title}</h3>
-      <p className="article-summary">{article.summary}</p>
-      <div className="article-footer">
-        <span className="author">By {article.author}</span>
-        <button className="read-more-btn">Read More</button>
-      </div>
-    </div>
-  );
-}
-```
-
-## 📥 Submission Instructions
-
-1. **Create a project folder** named `frontend-web-submission-[your-name]`
-2. **Include all files:**
-   - Complete React application
-   - README.md with setup instructions
-   - Package.json and lock files
-   - Any additional assets or documentation
-3. **Test thoroughly** on different devices and browsers
-4. **Document your approach** and any challenges faced
+- **Advanced NLP:** Use of transformer models or advanced techniques
+- **Duplicate detection:** Implement article deduplication
+- **Sentiment analysis:** Add sentiment scoring to articles
+- **Multi-source:** Extract from multiple news sources
+- **Real-time processing:** Design for continuous extraction
+- **Data visualization:** Charts showing classification distribution
 
 ## ❌ What NOT to Do
 
-- Don't use inline styles everywhere (organize your CSS)
-- Don't ignore responsive design
-- Don't skip error handling
-- Don't hardcode data without proper structure
-- Don't forget accessibility basics
-- Don't submit without testing on mobile
+- Don't scrape aggressively (respect rate limits)
+- Don't hardcode news article links (make it dynamic)
+- Don't submit without proper documentation
+- Don't use copyrighted content inappropriately
+- Don't ignore error handling
+
+## 📥 Submission Instructions
+
+1. **Create a folder** named `ai-ml-submission-[your-name]`
+2. **Include all files:**
+   - Source code
+   - Output JSON file
+   - README.md with documentation
+   - Requirements/dependencies file
+3. **Zip the folder** or create a Git repository
+4. **Email submission** or upload as instructed
+
+## 🕒 Timeline
+
+- **Day 1-2:** Research and setup, choose target website
+- **Day 3-4:** Implement scraper and data extraction
+- **Day 5-6:** Build classification component
+- **Day 7:** Testing, documentation, and submission prep
+
+## 🤝 Support
+
+If you have questions:
+- **Technical issues:** Focus on the approach rather than specific implementation
+- **Website access:** Choose an alternative if your first choice doesn't work
+- **Classification approach:** Document your reasoning for the chosen method
 
 ---
 
-**Show us your frontend skills and create something beautiful! We're excited to see your approach to modern web development. 🚀**
+**Good luck! We're excited to see your approach to news data extraction and classification. 🚀**
