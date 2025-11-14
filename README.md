@@ -1,141 +1,76 @@
-# 📰 News Aggregation & Intelligence Platform - Volunteer Assessment Tasks
+# 📱 Mobile Development Team Assessment
 
-Welcome to the **News Aggregation & Intelligence Platform** project! This repository contains assessment tasks designed to evaluate technical skills across different teams through a realistic news aggregation system.
+## Task: Mini Mobile News App
 
-## 🎯 Project Overview
+**Estimated Time:** 6-8 hours  
+**Difficulty:** Intermediate
 
-The platform collects news articles from various online sources, processes them, classifies them, stores them, and presents them through web/mobile interfaces. Users can search, filter, save articles, and receive notifications when new articles match their interests.
+## 🎯 Objective
 
-## 🏗️ Repository Structure
+Create a mobile application that provides users with an intuitive way to browse, read, and save news articles with smooth navigation and local storage functionality.
 
-Each team has their own branch with specific tasks and requirements:
+## 📋 Core Requirements
 
-### 📊 Available Team Branches
+### Essential Features
 
-| Team | Branch Name | Focus Area | Skills Assessed |
-|------|-------------|------------|-----------------|
-| 🤖 AI/Data/ML | `ai-ml-team` | News Extraction & Classification | Web scraping, NLP, Data processing, Classification |
-| ⚙️ Backend | `backend-team` | News Article Management API | REST APIs, Database design, CRUD operations |
-| � Frontend Web | `frontend-web-team` | News Browser Interface | React/Next.js, UI/UX, Component design |
-| 📱 Mobile | `mobile-team` | News Mobile App | Mobile development, Local storage, Navigation |
-| 🏛️ System Design | `system-architecture-team` | Architecture & Design | System design, Scalability, Distributed systems |
-| 🧪 Quality Assurance | `qa-team` | QA Planning & Testing | Test planning, Bug reporting, Quality processes |
-| 📈 Project Management | `pm-marketing-team` | Strategy & Planning | Project planning, Market research, Roadmapping |
-| 📊 Data Analysis | `data-analysis-team` | Data Collection & Analysis | Data processing, Analysis, Insights generation |
-
-## 🚀 Getting Started
-
-### For Volunteers:
-
-1. **Choose your team** based on your skills and interests
-2. **Switch to your team's branch**:
-   ```bash
-   git checkout [branch-name]
-   ```
-3. **Read the detailed README** in your branch for specific requirements
-4. **Complete the assigned tasks** following the guidelines provided
-5. **Submit your work** as instructed in your team's README
-
-### For Assessors:
-
-1. **Review submissions** in each team's branch
-2. **Use the evaluation criteria** provided in each team's README
-3. **Provide feedback** using the structured format included
-
-## 📋 General Guidelines
-
-### ⏰ Time Allocation
-- Most tasks are designed to take **4-8 hours** for completion
-- Focus on **quality over quantity**
-- Document your **thought process** and **decisions**
-
-### 📤 Submission Format
-- Create a **pull request** from your team branch to main
-- Include all **deliverables** specified in your team's README
-- Add a **summary** of your approach and any assumptions made
-
-### 🎯 Evaluation Criteria
-Each team has specific evaluation criteria, but all submissions will be assessed on:
-- **Technical competency** appropriate to the role
-- **Code quality** and documentation (where applicable)
-- **Problem-solving approach**
-- **Communication** and explanation of solutions
-
-## 📂 Team README Files (Available in Main Branch)
-
-If you want to preview the tasks before switching branches:
-- `AI-ML-TEAM-README.md` - AI/Data/ML team tasks
-- `BACKEND-TEAM-README.md` - Backend engineering tasks
-- `FRONTEND-WEB-TEAM-README.md` - Frontend web development tasks
-- `MOBILE-TEAM-README.md` - Mobile development tasks
-- `SYSTEM-ARCHITECTURE-TEAM-README.md` - System design tasks
-- `QA-TEAM-README.md` - Quality assurance tasks
-- `PM-MARKETING-TEAM-README.md` - Project management tasks
-- `DATA-ANALYSIS-TEAM-README.md` - Data analysis tasks
-
-## 🤝 Support
-
-If you have questions:
-- Check your **team's README** first for detailed instructions
-- Review the **examples** provided in your branch
-- Contact the assessment team for clarification
-
-## 📜 License
-
-This project is for assessment purposes only. All code and documentation created should be original work or properly attributed.
-
----
-
-**Good luck with your assessment! We're excited to see your solutions. 🚀**
-  - Category badge
-  - Author name (if available)
-  - Read more button
-- **Responsive grid layout** (3 columns desktop, 2 tablet, 1 mobile)
-- **Loading states** for better UX
+#### 1. News List Screen
+- **Article feed** displaying:
+  - Article title (truncated appropriately)
+  - Summary/snippet (first 100-150 characters)
+  - Publication date (relative format: "2 hours ago")
+  - Category indicator (colored badge/chip)
+  - Bookmark icon (empty/filled states)
+  - Author name
+- **Pull-to-refresh** functionality
+- **Infinite scroll** or pagination
+- **Loading indicators**
 - **Empty state** handling
 
-#### 2. Article Detail Page
-- **Full article display** with:
+#### 2. Article Detail Screen
+- **Full article view** with:
   - Complete title
-  - Full content
+  - Full content with proper formatting
   - Publication date and author
-  - Category
-  - Back to list navigation
-  - Share button (bonus)
-  - Related articles section (bonus)
+  - Category badge
+  - Bookmark toggle button
+  - Share functionality (native share if supported)
+  - Back navigation
+- **Scrollable content** with good readability
+- **Responsive text sizing**
 
-#### 3. Filter & Search Panel
-- **Category filter dropdown** with all available categories
-- **Search bar** for keyword searching
-- **Clear filters** button
-- **Active filter indicators**
-- **Results counter** ("Showing 24 of 156 articles")
+#### 3. Bookmarks/Saved Articles Screen
+- **List of saved articles** with same layout as main feed
+- **Remove bookmark** functionality
+- **Empty state** when no bookmarks exist
+- **Search/filter within bookmarks** (bonus)
+- **Sort options** (date saved, publication date)
 
-#### 4. Navigation & Layout
-- **Header** with logo/brand and navigation
-- **Mobile-friendly hamburger menu**
-- **Footer** with basic information
-- **Breadcrumbs** for better navigation
+#### 4. Navigation Structure
+- **Bottom tab navigation** or **drawer navigation**
+- **Clear navigation between screens**
+- **Proper back button handling**
+- **Tab badges** showing bookmark count (bonus)
 
 ### Technical Requirements
 
-#### Framework & Setup
-- **React** (preferred) or **Next.js**
-- **Modern CSS** (Flexbox/Grid, CSS Modules, Styled Components, or Tailwind CSS)
-- **Responsive design** for mobile, tablet, and desktop
-- **Clean component architecture**
+#### Data Source Options
+Choose **ONE** of these approaches:
+1. **Static JSON data** (provided sample below)
+2. **Mock API** you create locally
+3. **Public news API** (NewsAPI, Guardian, etc.)
+4. **Hardcoded data** in app files
 
-#### State Management
-- **useState/useReducer** for local state
-- **Context API** or state management library (Redux/Zustand) for global state
-- **Data fetching** with proper loading and error states
+#### Local Storage
+- **Persistent bookmark storage** using device storage
+- **Data persistence** between app launches
+- **Efficient storage management**
+- **Data synchronization** between screens
 
-#### Data Source
-You can use **any of these options:**
-1. **Mock JSON file** with sample articles (provided below)
-2. **Public news API** (NewsAPI, Guardian API, etc.)
-3. **Local API** you create for testing
-4. **Static data** in JavaScript files
+#### Platform Support
+Choose **ONE** platform:
+- **iOS** (Swift/SwiftUI or React Native)
+- **Android** (Kotlin/Java or React Native/Flutter)
+- **Cross-platform** (React Native, Flutter, Xamarin)
 
 ## 📊 Sample Data Structure
 
@@ -143,15 +78,26 @@ You can use **any of these options:**
 {
   "articles": [
     {
-      "id": "1",
-      "title": "Revolutionary AI Breakthrough Changes Everything",
-      "content": "Full article content here...",
-      "summary": "Scientists announce a major breakthrough in artificial intelligence that could revolutionize how we interact with technology.",
-      "category": "Technology",
-      "author": "Dr. Jane Smith",
+      "id": "article_1",
+      "title": "Revolutionary AI Breakthrough in Healthcare",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
+      "summary": "Scientists announce a major breakthrough in AI-powered healthcare diagnostics that could save millions of lives.",
+      "category": "Health",
+      "author": "Dr. Sarah Johnson",
       "publication_date": "2024-01-15T10:30:00Z",
-      "source_url": "https://example.com/article-1",
-      "image_url": "https://example.com/image1.jpg"
+      "source_url": "https://example.com/ai-healthcare",
+      "image_url": "https://example.com/health-ai.jpg"
+    },
+    {
+      "id": "article_2", 
+      "title": "Climate Summit Reaches Historic Agreement",
+      "content": "World leaders gathered at the annual climate summit...",
+      "summary": "195 countries agree on ambitious new climate targets following intense negotiations.",
+      "category": "World News",
+      "author": "Michael Chen",
+      "publication_date": "2024-01-14T15:45:00Z",
+      "source_url": "https://example.com/climate-summit",
+      "image_url": "https://example.com/climate.jpg"
     }
   ]
 }
@@ -160,178 +106,199 @@ You can use **any of these options:**
 ## 🎨 Design Requirements
 
 ### UI/UX Guidelines
-- **Clean, modern design** following current web standards
+- **Material Design** (Android) or **Human Interface Guidelines** (iOS)
 - **Consistent color scheme** and typography
-- **Intuitive navigation** and user flow
-- **Good contrast ratios** for accessibility
-- **Loading spinners** and skeleton screens
-- **Error message handling**
+- **Intuitive touch interactions**
+- **Smooth animations** and transitions
+- **Proper spacing** and visual hierarchy
+- **Accessible design** with good contrast
 
-### Responsive Breakpoints
-- **Mobile:** 320px - 768px
-- **Tablet:** 768px - 1024px
-- **Desktop:** 1024px+
+### Screen Layouts
+- **Card-based design** for article lists
+- **Typography hierarchy** for readability
+- **Consistent navigation patterns**
+- **Loading states** and error handling
+- **Responsive to different screen sizes**
 
-### Component Structure
-```
-src/
-├── components/
-│   ├── ArticleCard.jsx
-│   ├── ArticleDetail.jsx
-│   ├── SearchFilter.jsx
-│   ├── Navigation.jsx
-│   ├── Layout.jsx
-│   └── LoadingSpinner.jsx
-├── pages/
-│   ├── HomePage.jsx
-│   └── ArticlePage.jsx
-├── hooks/
-│   └── useArticles.js
-├── utils/
-│   └── dateUtils.js
-└── styles/
-    └── globals.css
-```
+### Performance Considerations
+- **Efficient list rendering** (RecyclerView, FlatList, etc.)
+- **Image loading optimization**
+- **Memory management**
+- **Smooth scrolling performance**
 
 ## 📤 Deliverables
 
-### 1. Source Code
-- **Complete React/Next.js application**
-- **All required components**
-- **Proper file organization**
-- **Package.json with dependencies**
+### 1. Mobile Application
+- **Complete working app** with all core features
+- **Source code** well-organized and commented
+- **Project configuration** files
+- **Build/compilation instructions**
 
-### 2. Styling & Design
-- **Responsive CSS implementation**
-- **Modern, clean visual design**
-- **Consistent styling across components**
-- **Mobile-first approach**
+### 2. Local Storage Implementation
+- **Bookmark persistence** functionality
+- **Data model** for stored articles
+- **Storage optimization** strategy
+- **Data migration** handling (if applicable)
 
-### 3. Functionality Demo
-- **Working application** with all features
-- **Sample data** or API integration
-- **Error handling demonstrations**
-- **Responsive behavior showcase**
+### 3. User Interface
+- **Polished UI** following platform guidelines
+- **Responsive layouts** for different screen sizes
+- **Intuitive user flow**
+- **Error states** and loading indicators
 
 ### 4. Documentation
-- **README.md** with setup instructions
-- **Component documentation** explaining key components
-- **Design decisions** explanation
-- **Future improvements** roadmap
+- **Setup and build instructions**
+- **Feature walkthrough**
+- **Technical architecture** explanation
+- **Known limitations** and future improvements
 
 ### 5. Technical Explanation (400-600 words)
 Address these questions:
-- Why did you choose your component structure?
-- How did you handle state management?
-- What accessibility considerations did you implement?
-- How would you optimize performance for 1000+ articles?
-- What responsive design challenges did you face?
+- Why did you choose your development platform/framework?
+- How did you implement local storage for bookmarks?
+- What navigation pattern did you choose and why?
+- How did you optimize performance for large article lists?
+- What challenges did you face with mobile-specific constraints?
 
 ## 🎯 Evaluation Criteria
 
-### Code Quality & Architecture (30%)
-- **Component design:** Reusable, well-structured components
-- **React best practices:** Proper hooks usage, performance optimization
-- **Code organization:** Clear file structure and naming
+### Mobile Development Skills (30%)
+- **Platform proficiency:** Proper use of chosen platform/framework
+- **Code quality:** Clean, maintainable code structure
+- **Architecture:** Well-organized app architecture
+- **Performance:** Smooth user experience
+
+### User Experience (25%)
+- **Navigation:** Intuitive and consistent navigation
+- **Usability:** Easy to understand and use
+- **Visual design:** Polished, professional appearance
+- **Responsiveness:** Appropriate for mobile interaction
+
+### Feature Implementation (25%)
+- **Core functionality:** All required features working properly
+- **Local storage:** Reliable bookmark persistence
+- **Data handling:** Efficient data management
 - **Error handling:** Graceful error management
 
-### UI/UX Design (25%)
-- **Visual appeal:** Modern, clean design
-- **User experience:** Intuitive navigation and interaction
-- **Responsive design:** Works well on all device sizes
-- **Accessibility:** Basic accessibility considerations
-
-### Functionality (25%)
-- **Feature completeness:** All required features working
-- **Search and filtering:** Proper implementation
-- **Navigation:** Smooth user flow
-- **Data handling:** Proper data display and management
-
 ### Technical Implementation (20%)
-- **React proficiency:** Proper use of React concepts
-- **Performance:** Efficient rendering and updates
-- **State management:** Appropriate state handling
-- **Documentation:** Clear setup and component documentation
+- **Code organization:** Clean project structure
+- **Documentation:** Clear setup and usage instructions
+- **Platform best practices:** Following mobile development standards
+- **Innovation:** Creative solutions to mobile challenges
 
-## 🛠️ Recommended Technologies
+## 🛠️ Technology Options
 
-### Core Framework
-- **React 18+** with hooks
-- **Next.js** (for SSR/routing bonus points)
-- **Create React App** (quick setup)
+### Native Development
+**iOS:**
+- Swift + UIKit
+- SwiftUI (recommended for new projects)
+- Xcode
 
-### Styling Options
-- **CSS Modules** for scoped styling
-- **Styled Components** for CSS-in-JS
-- **Tailwind CSS** for utility-first CSS
-- **SCSS/SASS** for enhanced CSS
-- **Emotion** for CSS-in-JS
+**Android:**
+- Kotlin + Jetpack Compose (recommended)
+- Java + Traditional Views
+- Android Studio
 
-### UI Libraries (Optional)
-- **Material-UI (MUI)**
-- **Ant Design**
-- **Chakra UI**
-- **React Bootstrap**
+### Cross-Platform
+**React Native:**
+- JavaScript/TypeScript
+- React Native CLI or Expo
+- VS Code + React Native Tools
 
-### State Management
-- **React Context + useReducer**
-- **Zustand** (lightweight)
-- **Redux Toolkit** (complex state)
+**Flutter:**
+- Dart
+- Flutter SDK
+- VS Code + Flutter extension
+
+**Other Options:**
+- Xamarin (C#)
+- Ionic (HTML/CSS/JS)
+
+### Local Storage Options
+- **SQLite** (all platforms)
+- **SharedPreferences** (Android) / **UserDefaults** (iOS)
+- **Core Data** (iOS) / **Room** (Android)
+- **AsyncStorage** (React Native)
+- **Hive/SharedPreferences** (Flutter)
 
 ## 📚 Bonus Points
 
-- **Performance optimization:** Lazy loading, memoization, virtualization
-- **Advanced animations:** Smooth transitions and micro-interactions
-- **PWA features:** Service worker, offline support
-- **Testing:** Unit tests with Jest/React Testing Library
-- **TypeScript:** Type safety implementation
-- **Dark mode:** Theme switching functionality
-- **Accessibility:** WCAG compliance, screen reader support
-- **SEO optimization:** Meta tags, structured data
-- **Analytics:** User interaction tracking setup
+- **Offline functionality:** Read saved articles without internet
+- **Dark mode support:** Theme switching capability
+- **Push notifications:** Article update notifications
+- **Search functionality:** Search through articles
+- **Categories filter:** Filter articles by category
+- **Social sharing:** Share articles to social media
+- **Reading progress:** Track reading progress in articles
+- **Font size adjustment:** Accessibility feature
+- **Swipe gestures:** Swipe to bookmark/share
+- **Image caching:** Efficient image loading and caching
 
-## 💡 Component Examples
+## 💡 Code Examples
 
-### Article Card Component
+### React Native Article List
 ```jsx
-function ArticleCard({ article, onClick }) {
+function ArticleList({ articles, onBookmark }) {
+  const renderArticle = ({ item }) => (
+    <TouchableOpacity 
+      style={styles.articleCard}
+      onPress={() => navigateToDetail(item.id)}
+    >
+      <View style={styles.categoryBadge}>
+        <Text style={styles.categoryText}>{item.category}</Text>
+      </View>
+      <Text style={styles.title}>{item.title}</Text>
+      <Text style={styles.summary}>{item.summary}</Text>
+      <View style={styles.footer}>
+        <Text style={styles.author}>By {item.author}</Text>
+        <TouchableOpacity onPress={() => onBookmark(item.id)}>
+          <Icon name="bookmark" />
+        </TouchableOpacity>
+      </View>
+    </TouchableOpacity>
+  );
+
   return (
-    <div className="article-card" onClick={() => onClick(article.id)}>
-      <div className="article-header">
-        <span className="category-badge">{article.category}</span>
-        <span className="publish-date">{formatDate(article.publication_date)}</span>
-      </div>
-      <h3 className="article-title">{article.title}</h3>
-      <p className="article-summary">{article.summary}</p>
-      <div className="article-footer">
-        <span className="author">By {article.author}</span>
-        <button className="read-more-btn">Read More</button>
-      </div>
-    </div>
+    <FlatList
+      data={articles}
+      renderItem={renderArticle}
+      keyExtractor={(item) => item.id}
+      refreshing={loading}
+      onRefresh={fetchArticles}
+    />
   );
 }
 ```
 
 ## 📥 Submission Instructions
 
-1. **Create a project folder** named `frontend-web-submission-[your-name]`
-2. **Include all files:**
-   - Complete React application
-   - README.md with setup instructions
-   - Package.json and lock files
-   - Any additional assets or documentation
-3. **Test thoroughly** on different devices and browsers
-4. **Document your approach** and any challenges faced
+1. **Create a project folder** named `mobile-submission-[your-name]-[platform]`
+2. **Include all components:**
+   - Complete source code
+   - Build/setup instructions
+   - README with feature explanation
+   - Screenshots or demo video (optional but helpful)
+3. **Test thoroughly** on device or simulator
+4. **Document any platform-specific considerations**
 
 ## ❌ What NOT to Do
 
-- Don't use inline styles everywhere (organize your CSS)
-- Don't ignore responsive design
-- Don't skip error handling
+- Don't ignore platform-specific design guidelines
+- Don't skip local storage implementation
+- Don't create overly complex navigation
+- Don't ignore performance optimization
+- Don't submit without testing on actual device/simulator
 - Don't hardcode data without proper structure
-- Don't forget accessibility basics
-- Don't submit without testing on mobile
+- Don't ignore error states and loading indicators
+
+## 📱 Testing Recommendations
+
+- **Test on multiple screen sizes** (if possible)
+- **Verify bookmark persistence** across app restarts
+- **Test offline functionality** (for bonus features)
+- **Check navigation flow** thoroughly
+- **Test edge cases** (empty lists, network errors)
 
 ---
 
-**Show us your frontend skills and create something beautiful! We're excited to see your approach to modern web development. 🚀**
+**Show us your mobile development skills and create an app users will love! We're excited to see your approach to mobile UX and functionality. 🚀**
